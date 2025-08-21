@@ -31,18 +31,25 @@ export default defineConfig({
       provider: 'local'
     },
 
-    sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
-    ],
+    sidebar: {
+      // 默认侧边栏配置
+      '/': [
+        {
+          text: 'Examples',
+          items: [
+            { text: 'Markdown Examples', link: '/markdown-examples' },
+            { text: 'Runtime API Examples', link: '/api-examples' }
+          ]
+        }
+      ],
+      // 可以为不同路径配置不同的侧边栏
+      // '/movies/': [
+      //   { text: '电影列表', link: '/movies/' }
+      // ]
+    },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/Leslie-Chan23/ImtBlog' }
+      { icon: 'github', link: 'https://github.com/Leslie-Chan23' }
     ]
   }
 })
