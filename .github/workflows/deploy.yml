@@ -49,3 +49,7 @@ jobs:
           user_email: 'github-actions[bot]@users.noreply.github.com'
           # 提交信息
           commit_message: 'Deploy VitePress site'
+          # 重要：使用force_orphan创建独立分支（避免与已有分支冲突）
+          force_orphan: true
+          # 启用安静模式减少输出
+          quiet: true
