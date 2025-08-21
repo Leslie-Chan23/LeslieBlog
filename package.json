@@ -10,5 +10,8 @@
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "docs:deploy": "vitepress build docs && gh-pages -d docs/.vitepress/dist"
+  },
+  "dependencies": {
+    "@iconify-icons/ant-design": "^1.2.7"
   }
 }

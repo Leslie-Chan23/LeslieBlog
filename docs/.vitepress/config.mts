@@ -17,6 +17,7 @@ const teekConfig = defineTeekConfig({
     sidebarOption: {
       titleFormMd:true,//使用md文件一级标题名作为sidebar的text
       restart:true,//每次增加删除重启sidebar
+      
     },
   },
   footerInfo: {
@@ -57,7 +58,9 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'About me', link: '/AboutMe' },
-      { text: '一些影评', link: '/movies' }
+      { text: '一些影评', link: '/movies' },
+      { text: 'blog', link: '/blog' },
+      { text: 'NAS', link: '/NAS' }
     ],
 
     search: {
