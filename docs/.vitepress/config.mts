@@ -21,6 +21,8 @@ export default defineConfig({
   // 或者
   // base: '/blog/',  // 如果部署到子路径/blog/
   
+  head: [["link", { rel: "icon", href: "/bianmu.svg" }]],
+
   // Teek主题配置
   extends: teekConfig,
   title: "Leslie Blog On Vite Press",
@@ -53,9 +55,14 @@ export default defineConfig({
       //   { text: '电影列表', link: '/movies/' }
       // ]
     },
+    footer:{
+      copyright:"copyright@ 2025 Leslie Chan",
+    },
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Leslie-Chan23' }
     ]
+
+
   }
 })

@@ -15,12 +15,14 @@ hero:
       link: /api-examples
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 自由
+    details: freedom
+  - title: 洒脱
+    details: unlimited
+  - title: 热爱
+    details: fond
+  - title: 生命
+    details: life
 ---
 
 
