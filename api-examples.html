@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Runtime API Examples | Leslie Blog On Vite Press</title>
+    <meta name="description" content="a blog mainly focus on my road">
+    <meta name="generator" content="VitePress v1.6.3">
+    <link rel="preload stylesheet" href="/assets/style.5bshJ2JA.css" as="style">
+    <link rel="preload stylesheet" href="/vp-icons.css" as="style">
+    <script type="module" src="/assets/chunks/metadata.c8c4929c.js"></script>
+    <script type="module" src="/assets/app.BF0MgBua.js"></script>
+    <link rel="preload" href="/assets/inter-roman-latin.Di8DUHzh.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="modulepreload" href="/assets/chunks/theme.PMmdzcA3.js">
+    <link rel="modulepreload" href="/assets/chunks/framework.DwkmFVWF.js">
+    <link rel="modulepreload" href="/assets/api-examples.md.Cxndvri1.lean.js">
+    <script id="check-dark-mode">(()=>{const e=localStorage.getItem("vitepress-theme-appearance")||"auto",a=window.matchMedia("(prefers-color-scheme: dark)").matches;(!e||e==="auto"?a:e==="dark")&&document.documentElement.classList.add("dark")})();</script>
+    <script id="check-mac-os">document.documentElement.classList.toggle("mac",/Mac|iPhone|iPod|iPad/i.test(navigator.platform));</script>
+  </head>
+  <body>
+    <div id="app"><div class="Layout" data-v-e6e93416><!--[--><!--]--><!--[--><span tabindex="-1" data-v-d844c1cc></span><a href="#VPContent" class="VPSkipLink visually-hidden" data-v-d844c1cc>Skip to content</a><!--]--><!----><header class="VPNav" data-v-e6e93416 data-v-484b88cd><div class="VPNavBar" data-v-484b88cd data-v-8460da9d><div class="wrapper" data-v-8460da9d><div class="container" data-v-8460da9d><div class="title" data-v-8460da9d><div class="VPNavBarTitle has-sidebar" data-v-8460da9d data-v-b41cdebd><a class="title" href="/" data-v-b41cdebd><!--[--><!--]--><!----><span data-v-b41cdebd>Leslie Blog On Vite Press</span><!--[--><!--]--></a></div></div><div class="content" data-v-8460da9d><div class="content-body" data-v-8460da9d><!--[--><!--]--><div class="VPNavBarSearch search" data-v-8460da9d><!--[--><!----><div id="local-search"><button type="button" class="DocSearch DocSearch-Button" aria-label="Search"><span class="DocSearch-Button-Container"><span class="vp-icon DocSearch-Search-Icon"></span><span class="DocSearch-Button-Placeholder">Search</span></span><span class="DocSearch-Button-Keys"><kbd class="DocSearch-Button-Key"></kbd><kbd class="DocSearch-Button-Key">K</kbd></span></button></div><!--]--></div><nav aria-labelledby="main-nav-aria-label" class="VPNavBarMenu menu" data-v-8460da9d data-v-97bed8c6><span id="main-nav-aria-label" class="visually-hidden" data-v-97bed8c6> Main Navigation </span><!--[--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/" tabindex="0" data-v-97bed8c6 data-v-2978a76d><!--[--><span data-v-2978a76d>Home</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/AboutMe.html" tabindex="0" data-v-97bed8c6 data-v-2978a76d><!--[--><span data-v-2978a76d>About me</span><!--]--></a><!--]--><!--]--></nav><!----><div class="VPNavBarAppearance appearance" data-v-8460da9d data-v-c9d576fe><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-c9d576fe data-v-c5145c83 data-v-b3af3b04><span class="check" data-v-b3af3b04><span class="icon" data-v-b3af3b04><!--[--><span class="vpi-sun sun" data-v-c5145c83></span><span class="vpi-moon moon" data-v-c5145c83></span><!--]--></span></span></button></div><div class="VPSocialLinks VPNavBarSocialLinks social-links" data-v-8460da9d data-v-a9cd3eec data-v-fd59dae0><!--[--><a class="VPSocialLink no-icon" href="https://github.com/Leslie-Chan23" aria-label="github" target="_blank" rel="noopener" data-v-fd59dae0 data-v-434547c6><span class="vpi-social-github"></span></a><!--]--></div><div class="VPFlyout VPNavBarExtra extra" data-v-8460da9d data-v-b4eafc27 data-v-eae8d89e><button type="button" class="button" aria-haspopup="true" aria-expanded="false" aria-label="extra navigation" data-v-eae8d89e><span class="vpi-more-horizontal icon" data-v-eae8d89e></span></button><div class="menu" data-v-eae8d89e><div class="VPMenu" data-v-eae8d89e data-v-71a1adfb><!----><!--[--><!--[--><!----><div class="group" data-v-b4eafc27><div class="item appearance" data-v-b4eafc27><p class="label" data-v-b4eafc27>Appearance</p><div class="appearance-action" data-v-b4eafc27><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-b4eafc27 data-v-c5145c83 data-v-b3af3b04><span class="check" data-v-b3af3b04><span class="icon" data-v-b3af3b04><!--[--><span class="vpi-sun sun" data-v-c5145c83></span><span class="vpi-moon moon" data-v-c5145c83></span><!--]--></span></span></button></div></div></div><div class="group" data-v-b4eafc27><div class="item social-links" data-v-b4eafc27><div class="VPSocialLinks social-links-list" data-v-b4eafc27 data-v-fd59dae0><!--[--><a class="VPSocialLink no-icon" href="https://github.com/Leslie-Chan23" aria-label="github" target="_blank" rel="noopener" data-v-fd59dae0 data-v-434547c6><span class="vpi-social-github"></span></a><!--]--></div></div></div><!--]--><!--]--></div></div></div><!--[--><!--]--><button type="button" class="VPNavBarHamburger hamburger" aria-label="mobile navigation" aria-expanded="false" aria-controls="VPNavScreen" data-v-8460da9d data-v-5c7c69d6><span class="container" data-v-5c7c69d6><span class="top" data-v-5c7c69d6></span><span class="middle" data-v-5c7c69d6></span><span class="bottom" data-v-5c7c69d6></span></span></button></div></div></div></div><div class="divider" data-v-8460da9d><div class="divider-line" data-v-8460da9d></div></div></div><!----></header><div class="VPLocalNav has-sidebar empty" data-v-e6e93416 data-v-19434187><div class="container" data-v-19434187><button class="menu" aria-expanded="false" aria-controls="VPSidebarNav" data-v-19434187><span class="vpi-align-left menu-icon" data-v-19434187></span><span class="menu-text" data-v-19434187>Menu</span></button><div class="VPLocalNavOutlineDropdown" style="--vp-vh:0px;" data-v-19434187 data-v-a05ffc27><button data-v-a05ffc27>Return to top</button><!----></div></div></div><aside class="VPSidebar" data-v-e6e93416 data-v-d855c04c><div class="curtain" data-v-d855c04c></div><nav class="nav" id="VPSidebarNav" aria-labelledby="sidebar-aria-label" tabindex="-1" data-v-d855c04c><span class="visually-hidden" id="sidebar-aria-label" data-v-d855c04c> Sidebar Navigation </span><!--[--><!--]--><!--[--><div class="no-transition group" data-v-46744edd><section class="VPSidebarItem level-0 has-active" data-v-46744edd data-v-c68629ef><div class="item" role="button" tabindex="0" data-v-c68629ef><div class="indicator" data-v-c68629ef></div><h2 class="text" data-v-c68629ef>Examples</h2><!----></div><div class="items" data-v-c68629ef><!--[--><div class="VPSidebarItem level-1 is-link" data-v-c68629ef data-v-c68629ef><div class="item" data-v-c68629ef><div class="indicator" data-v-c68629ef></div><a class="VPLink link link" href="/markdown-examples.html" data-v-c68629ef><!--[--><p class="text" data-v-c68629ef>Markdown Examples</p><!--]--></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-c68629ef data-v-c68629ef><div class="item" data-v-c68629ef><div class="indicator" data-v-c68629ef></div><a class="VPLink link link" href="/api-examples.html" data-v-c68629ef><!--[--><p class="text" data-v-c68629ef>Runtime API Examples</p><!--]--></a><!----></div><!----></div><!--]--></div></section></div><!--]--><!--[--><!--]--></nav></aside><div class="VPContent has-sidebar" id="VPContent" data-v-e6e93416 data-v-7481b9b2><div class="VPDoc has-sidebar has-aside" data-v-7481b9b2 data-v-c68e01aa><!--[--><!--]--><div class="container" data-v-c68e01aa><div class="aside" data-v-c68e01aa><div class="aside-curtain" data-v-c68e01aa></div><div class="aside-container" data-v-c68e01aa><div class="aside-content" data-v-c68e01aa><div class="VPDocAside" data-v-c68e01aa data-v-7e77a754><!--[--><!--]--><!--[--><!--]--><nav aria-labelledby="doc-outline-aria-label" class="VPDocAsideOutline" data-v-7e77a754 data-v-c203c969><div class="content" data-v-c203c969><div class="outline-marker" data-v-c203c969></div><div aria-level="2" class="outline-title" id="doc-outline-aria-label" role="heading" data-v-c203c969>On this page</div><ul class="VPDocOutlineItem root" data-v-c203c969 data-v-8aa50599><!--[--><!--]--></ul></div></nav><!--[--><!--]--><div class="spacer" data-v-7e77a754></div><!--[--><!--]--><!----><!--[--><!--]--><!--[--><!--]--></div></div></div></div><div class="content" data-v-c68e01aa><div class="content-container" data-v-c68e01aa><!--[--><!--]--><main class="main" data-v-c68e01aa><div style="position:relative;" class="vp-doc _api-examples" data-v-c68e01aa><div><h1 id="runtime-api-examples" tabindex="-1">Runtime API Examples <a class="header-anchor" href="#runtime-api-examples" aria-label="Permalink to &quot;Runtime API Examples&quot;">​</a></h1><p>This page demonstrates usage of some of the runtime APIs provided by VitePress.</p><p>The main <code>useData()</code> API can be used to access site, theme, and page data for the current page. It works in both <code>.md</code> and <code>.vue</code> files:</p><div class="language-md vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">md</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;script setup&gt;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">import { useData } from &#39;vitepress&#39;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">const { theme, page, frontmatter } = useData()</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;/script&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">## Results</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">### Theme Data</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;pre&gt;{{ theme }}&lt;/pre&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">### Page Data</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;pre&gt;{{ page }}&lt;/pre&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">### Page Frontmatter</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;pre&gt;{{ frontmatter }}&lt;/pre&gt;</span></span></code></pre></div><h2 id="results" tabindex="-1">Results <a class="header-anchor" href="#results" aria-label="Permalink to &quot;Results&quot;">​</a></h2><h3 id="theme-data" tabindex="-1">Theme Data <a class="header-anchor" href="#theme-data" aria-label="Permalink to &quot;Theme Data&quot;">​</a></h3><pre>{
+  &quot;siteAnalytics&quot;: [
+    {
+      &quot;provider&quot;: &quot;baidu&quot;,
+      &quot;options&quot;: {
+        &quot;id&quot;: &quot;******&quot;
+      }
+    }
+  ],
+  &quot;nav&quot;: [
+    {
+      &quot;text&quot;: &quot;Home&quot;,
+      &quot;link&quot;: &quot;/&quot;
+    },
+    {
+      &quot;text&quot;: &quot;About me&quot;,
+      &quot;link&quot;: &quot;/AboutMe&quot;
+    }
+  ],
+  &quot;search&quot;: {
+    &quot;provider&quot;: &quot;local&quot;
+  },
+  &quot;sidebar&quot;: {
+    &quot;/&quot;: [
+      {
+        &quot;text&quot;: &quot;Examples&quot;,
+        &quot;items&quot;: [
+          {
+            &quot;text&quot;: &quot;Markdown Examples&quot;,
+            &quot;link&quot;: &quot;/markdown-examples&quot;
+          },
+          {
+            &quot;text&quot;: &quot;Runtime API Examples&quot;,
+            &quot;link&quot;: &quot;/api-examples&quot;
+          }
+        ]
+      }
+    ],
+    &quot;/movies/&quot;: [
+      {
+        &quot;text&quot;: &quot;&quot;,
+        &quot;items&quot;: [
+          {
+            &quot;text&quot;: &quot;index&quot;,
+            &quot;link&quot;: &quot;/movies/index&quot;
+          },
+          {
+            &quot;text&quot;: &quot;movie&quot;,
+            &quot;link&quot;: &quot;/movies/010.movie&quot;
+          },
+          {
+            &quot;text&quot;: &quot;movie&quot;,
+            &quot;link&quot;: &quot;/movies/020.movie&quot;
+          },
+          {
+            &quot;text&quot;: &quot;movie&quot;,
+            &quot;link&quot;: &quot;/movies/030.movie&quot;
+          },
+          {
+            &quot;text&quot;: &quot;movie&quot;,
+            &quot;link&quot;: &quot;/movies/040.movie&quot;
+          },
+          {
+            &quot;text&quot;: &quot;movie&quot;,
+            &quot;link&quot;: &quot;/movies/050.movie&quot;
+          },
+          {
+            &quot;text&quot;: &quot;movie&quot;,
+            &quot;link&quot;: &quot;/movies/060.movie&quot;
+          },
+          {
+            &quot;text&quot;: &quot;movie&quot;,
+            &quot;link&quot;: &quot;/movies/070.movie&quot;
+          },
+          {
+            &quot;text&quot;: &quot;movie&quot;,
+            &quot;link&quot;: &quot;/movies/080.movie&quot;
+          },
+          {
+            &quot;text&quot;: &quot;movie&quot;,
+            &quot;link&quot;: &quot;/movies/090.movie&quot;
+          },
+          {
+            &quot;text&quot;: &quot;movie&quot;,
+            &quot;link&quot;: &quot;/movies/100.movie&quot;
+          },
+          {
+            &quot;text&quot;: &quot;movie&quot;,
+            &quot;link&quot;: &quot;/movies/110.movie&quot;
+          },
+          {
+            &quot;text&quot;: &quot;movie&quot;,
+            &quot;link&quot;: &quot;/movies/120.movie&quot;
+          },
+          {
+            &quot;text&quot;: &quot;movie&quot;,
+            &quot;link&quot;: &quot;/movies/130.movie&quot;
+          }
+        ]
+      }
+    ]
+  },
+  &quot;socialLinks&quot;: [
+    {
+      &quot;icon&quot;: &quot;github&quot;,
+      &quot;link&quot;: &quot;https://github.com/Leslie-Chan23&quot;
+    }
+  ],
+  &quot;permalinks&quot;: {
+    &quot;map&quot;: {},
+    &quot;inv&quot;: {}
+  },
+  &quot;docAnalysisInfo&quot;: {
+    &quot;fileList&quot;: [
+      {
+        &quot;filePath&quot;: &quot;F:\\VitePressBlog\\docs\\AboutMe.md&quot;,
+        &quot;relativePath&quot;: &quot;AboutMe.md&quot;
+      },
+      {
+        &quot;filePath&quot;: &quot;F:\\VitePressBlog\\docs\\api-examples.md&quot;,
+        &quot;relativePath&quot;: &quot;api-examples.md&quot;
+      },
+      {
+        &quot;filePath&quot;: &quot;F:\\VitePressBlog\\docs\\markdown-examples.md&quot;,
+        &quot;relativePath&quot;: &quot;markdown-examples.md&quot;
+      },
+      {
+        &quot;filePath&quot;: &quot;F:\\VitePressBlog\\docs\\movies\\010.movie.md&quot;,
+        &quot;relativePath&quot;: &quot;movies/010.movie.md&quot;
+      },
+      {
+        &quot;filePath&quot;: &quot;F:\\VitePressBlog\\docs\\movies\\020.movie.md&quot;,
+        &quot;relativePath&quot;: &quot;movies/020.movie.md&quot;
+      },
+      {
+        &quot;filePath&quot;: &quot;F:\\VitePressBlog\\docs\\movies\\030.movie.md&quot;,
+        &quot;relativePath&quot;: &quot;movies/030.movie.md&quot;
+      },
+      {
+        &quot;filePath&quot;: &quot;F:\\VitePressBlog\\docs\\movies\\040.movie.md&quot;,
+        &quot;relativePath&quot;: &quot;movies/040.movie.md&quot;
+      },
+      {
+        &quot;filePath&quot;: &quot;F:\\VitePressBlog\\docs\\movies\\050.movie.md&quot;,
+        &quot;relativePath&quot;: &quot;movies/050.movie.md&quot;
+      },
+      {
+        &quot;filePath&quot;: &quot;F:\\VitePressBlog\\docs\\movies\\060.movie.md&quot;,
+        &quot;relativePath&quot;: &quot;movies/060.movie.md&quot;
+      },
+      {
+        &quot;filePath&quot;: &quot;F:\\VitePressBlog\\docs\\movies\\070.movie.md&quot;,
+        &quot;relativePath&quot;: &quot;movies/070.movie.md&quot;
+      },
+      {
+        &quot;filePath&quot;: &quot;F:\\VitePressBlog\\docs\\movies\\080.movie.md&quot;,
+        &quot;relativePath&quot;: &quot;movies/080.movie.md&quot;
+      },
+      {
+        &quot;filePath&quot;: &quot;F:\\VitePressBlog\\docs\\movies\\090.movie.md&quot;,
+        &quot;relativePath&quot;: &quot;movies/090.movie.md&quot;
+      },
+      {
+        &quot;filePath&quot;: &quot;F:\\VitePressBlog\\docs\\movies\\100.movie.md&quot;,
+        &quot;relativePath&quot;: &quot;movies/100.movie.md&quot;
+      },
+      {
+        &quot;filePath&quot;: &quot;F:\\VitePressBlog\\docs\\movies\\110.movie.md&quot;,
+        &quot;relativePath&quot;: &quot;movies/110.movie.md&quot;
+      },
+      {
+        &quot;filePath&quot;: &quot;F:\\VitePressBlog\\docs\\movies\\120.movie.md&quot;,
+        &quot;relativePath&quot;: &quot;movies/120.movie.md&quot;
+      },
+      {
+        &quot;filePath&quot;: &quot;F:\\VitePressBlog\\docs\\movies\\130.movie.md&quot;,
+        &quot;relativePath&quot;: &quot;movies/130.movie.md&quot;
+      },
+      {
+        &quot;filePath&quot;: &quot;F:\\VitePressBlog\\docs\\movies\\index.md&quot;,
+        &quot;relativePath&quot;: &quot;movies/index.md&quot;
+      }
+    ],
+    &quot;totalFileWords&quot;: 5821,
+    &quot;eachFileWords&quot;: [
+      {
+        &quot;fileInfo&quot;: {
+          &quot;filePath&quot;: &quot;F:\\VitePressBlog\\docs\\AboutMe.md&quot;,
+          &quot;relativePath&quot;: &quot;AboutMe.md&quot;
+        },
+        &quot;wordCount&quot;: 0,
+        &quot;readingTime&quot;: &quot;1m&quot;,
+        &quot;frontmatter&quot;: {}
+      },
+      {
+        &quot;fileInfo&quot;: {
+          &quot;filePath&quot;: &quot;F:\\VitePressBlog\\docs\\api-examples.md&quot;,
+          &quot;relativePath&quot;: &quot;api-examples.md&quot;
+        },
+        &quot;wordCount&quot;: 119,
+        &quot;readingTime&quot;: &quot;1m&quot;,
+        &quot;frontmatter&quot;: {
+          &quot;outline&quot;: &quot;deep&quot;
+        }
+      },
+      {
+        &quot;fileInfo&quot;: {
+          &quot;filePath&quot;: &quot;F:\\VitePressBlog\\docs\\markdown-examples.md&quot;,
+          &quot;relativePath&quot;: &quot;markdown-examples.md&quot;
+        },
+        &quot;wordCount&quot;: 133,
+        &quot;readingTime&quot;: &quot;1m&quot;,
+        &quot;frontmatter&quot;: {}
+      },
+      {
+        &quot;fileInfo&quot;: {
+          &quot;filePath&quot;: &quot;F:\\VitePressBlog\\docs\\movies\\010.movie.md&quot;,
+          &quot;relativePath&quot;: &quot;movies/010.movie.md&quot;
+        },
+        &quot;wordCount&quot;: 343,
+        &quot;readingTime&quot;: &quot;1.2m&quot;,
+        &quot;frontmatter&quot;: {}
+      },
+      {
+        &quot;fileInfo&quot;: {
+          &quot;filePath&quot;: &quot;F:\\VitePressBlog\\docs\\movies\\020.movie.md&quot;,
+          &quot;relativePath&quot;: &quot;movies/020.movie.md&quot;
+        },
+        &quot;wordCount&quot;: 231,
+        &quot;readingTime&quot;: &quot;1m&quot;,
+        &quot;frontmatter&quot;: {}
+      },
+      {
+        &quot;fileInfo&quot;: {
+          &quot;filePath&quot;: &quot;F:\\VitePressBlog\\docs\\movies\\030.movie.md&quot;,
+          &quot;relativePath&quot;: &quot;movies/030.movie.md&quot;
+        },
+        &quot;wordCount&quot;: 266,
+        &quot;readingTime&quot;: &quot;1m&quot;,
+        &quot;frontmatter&quot;: {}
+      },
+      {
+        &quot;fileInfo&quot;: {
+          &quot;filePath&quot;: &quot;F:\\VitePressBlog\\docs\\movies\\040.movie.md&quot;,
+          &quot;relativePath&quot;: &quot;movies/040.movie.md&quot;
+        },
+        &quot;wordCount&quot;: 985,
+        &quot;readingTime&quot;: &quot;3.5m&quot;,
+        &quot;frontmatter&quot;: {}
+      },
+      {
+        &quot;fileInfo&quot;: {
+          &quot;filePath&quot;: &quot;F:\\VitePressBlog\\docs\\movies\\050.movie.md&quot;,
+          &quot;relativePath&quot;: &quot;movies/050.movie.md&quot;
+        },
+        &quot;wordCount&quot;: 146,
+        &quot;readingTime&quot;: &quot;1m&quot;,
+        &quot;frontmatter&quot;: {}
+      },
+      {
+        &quot;fileInfo&quot;: {
+          &quot;filePath&quot;: &quot;F:\\VitePressBlog\\docs\\movies\\060.movie.md&quot;,
+          &quot;relativePath&quot;: &quot;movies/060.movie.md&quot;
+        },
+        &quot;wordCount&quot;: 144,
+        &quot;readingTime&quot;: &quot;1m&quot;,
+        &quot;frontmatter&quot;: {}
+      },
+      {
+        &quot;fileInfo&quot;: {
+          &quot;filePath&quot;: &quot;F:\\VitePressBlog\\docs\\movies\\070.movie.md&quot;,
+          &quot;relativePath&quot;: &quot;movies/070.movie.md&quot;
+        },
+        &quot;wordCount&quot;: 618,
+        &quot;readingTime&quot;: &quot;2.1m&quot;,
+        &quot;frontmatter&quot;: {}
+      },
+      {
+        &quot;fileInfo&quot;: {
+          &quot;filePath&quot;: &quot;F:\\VitePressBlog\\docs\\movies\\080.movie.md&quot;,
+          &quot;relativePath&quot;: &quot;movies/080.movie.md&quot;
+        },
+        &quot;wordCount&quot;: 88,
+        &quot;readingTime&quot;: &quot;1m&quot;,
+        &quot;frontmatter&quot;: {}
+      },
+      {
+        &quot;fileInfo&quot;: {
+          &quot;filePath&quot;: &quot;F:\\VitePressBlog\\docs\\movies\\090.movie.md&quot;,
+          &quot;relativePath&quot;: &quot;movies/090.movie.md&quot;
+        },
+        &quot;wordCount&quot;: 173,
+        &quot;readingTime&quot;: &quot;1m&quot;,
+        &quot;frontmatter&quot;: {}
+      },
+      {
+        &quot;fileInfo&quot;: {
+          &quot;filePath&quot;: &quot;F:\\VitePressBlog\\docs\\movies\\100.movie.md&quot;,
+          &quot;relativePath&quot;: &quot;movies/100.movie.md&quot;
+        },
+        &quot;wordCount&quot;: 181,
+        &quot;readingTime&quot;: &quot;1m&quot;,
+        &quot;frontmatter&quot;: {}
+      },
+      {
+        &quot;fileInfo&quot;: {
+          &quot;filePath&quot;: &quot;F:\\VitePressBlog\\docs\\movies\\110.movie.md&quot;,
+          &quot;relativePath&quot;: &quot;movies/110.movie.md&quot;
+        },
+        &quot;wordCount&quot;: 1195,
+        &quot;readingTime&quot;: &quot;4.1m&quot;,
+        &quot;frontmatter&quot;: {}
+      },
+      {
+        &quot;fileInfo&quot;: {
+          &quot;filePath&quot;: &quot;F:\\VitePressBlog\\docs\\movies\\120.movie.md&quot;,
+          &quot;relativePath&quot;: &quot;movies/120.movie.md&quot;
+        },
+        &quot;wordCount&quot;: 614,
+        &quot;readingTime&quot;: &quot;2.1m&quot;,
+        &quot;frontmatter&quot;: {}
+      },
+      {
+        &quot;fileInfo&quot;: {
+          &quot;filePath&quot;: &quot;F:\\VitePressBlog\\docs\\movies\\130.movie.md&quot;,
+          &quot;relativePath&quot;: &quot;movies/130.movie.md&quot;
+        },
+        &quot;wordCount&quot;: 406,
+        &quot;readingTime&quot;: &quot;1.4m&quot;,
+        &quot;frontmatter&quot;: {}
+      },
+      {
+        &quot;fileInfo&quot;: {
+          &quot;filePath&quot;: &quot;F:\\VitePressBlog\\docs\\movies\\index.md&quot;,
+          &quot;relativePath&quot;: &quot;movies/index.md&quot;
+        },
+        &quot;wordCount&quot;: 179,
+        &quot;readingTime&quot;: &quot;1m&quot;,
+        &quot;frontmatter&quot;: {}
+      }
+    ],
+    &quot;lastCommitTime&quot;: &quot;2025-08-21 09:46:19&quot;
+  },
+  &quot;catalogues&quot;: {
+    &quot;arr&quot;: [],
+    &quot;map&quot;: {},
+    &quot;inv&quot;: {}
+  },
+  &quot;posts&quot;: {
+    &quot;allPosts&quot;: [
+      {
+        &quot;url&quot;: &quot;/AboutMe.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;html&quot;,
+        &quot;date&quot;: &quot;2025-08-20 21:27:51&quot;,
+        &quot;capture&quot;: &quot;&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/api-examples.html&quot;,
+        &quot;frontmatter&quot;: {
+          &quot;outline&quot;: &quot;deep&quot;
+        },
+        &quot;title&quot;: &quot;Runtime API Examples&quot;,
+        &quot;date&quot;: &quot;2025-08-20 20:40:59&quot;,
+        &quot;capture&quot;: &quot;Runtime API Examples\nThis page demonstrates usage of some of the runtime APIs provided by VitePress.\nThe main `useData()` API can be used to access site, theme, and page data for the current page. It works in both `.md` and `.vue` files:\n```md\n&amp;lt;script setup\nimport { useData } from &#39;vitepress&#39;\ncon&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/&quot;,
+        &quot;frontmatter&quot;: {
+          &quot;layout&quot;: &quot;home&quot;,
+          &quot;hero&quot;: {
+            &quot;name&quot;: &quot;Leslie Blog On Vite Press&quot;,
+            &quot;text&quot;: &quot;a blog mainly focus on my road&quot;,
+            &quot;tagline&quot;: &quot;My great project tagline&quot;,
+            &quot;actions&quot;: [
+              {
+                &quot;theme&quot;: &quot;brand&quot;,
+                &quot;text&quot;: &quot;Markdown Examples&quot;,
+                &quot;link&quot;: &quot;/markdown-examples&quot;
+              },
+              {
+                &quot;theme&quot;: &quot;alt&quot;,
+                &quot;text&quot;: &quot;API Examples&quot;,
+                &quot;link&quot;: &quot;/api-examples&quot;
+              }
+            ]
+          },
+          &quot;features&quot;: [
+            {
+              &quot;title&quot;: &quot;Feature A&quot;,
+              &quot;details&quot;: &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit&quot;
+            },
+            {
+              &quot;title&quot;: &quot;Feature B&quot;,
+              &quot;details&quot;: &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit&quot;
+            },
+            {
+              &quot;title&quot;: &quot;Feature C&quot;,
+              &quot;details&quot;: &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit&quot;
+            }
+          ]
+        },
+        &quot;title&quot;: &quot;&quot;,
+        &quot;date&quot;: &quot;2025-08-20 20:40:59&quot;,
+        &quot;capture&quot;: &quot;&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/markdown-examples.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;Markdown Extension Examples&quot;,
+        &quot;date&quot;: &quot;2025-08-20 20:40:59&quot;,
+        &quot;capture&quot;: &quot;This page demonstrates some of the built-in markdown extensions provided by VitePress.\n Syntax Highlighting\nVitePress provides Syntax Highlighting powered by Shiki, with additional features like line-highlighting:\nInput\n````md\n```js{4}\nexport default {\n  data () {\n    return {\n      msg: &#39;Highlighte&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/010.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;A Brighter Summer Day&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;阳光灿烂的日子（雾）  \r\n不过本片确实有与其相似的地方  \r\n同样的少年遇到了一个灿烂的女孩  \r\n少年的爱都笼罩在那个更强的他者（牯岭街之哈尼之风光&amp;romance、校医之于小明母亲的切身好处、小马之家境乃至滑头之武力；于阳光灿烂而言，主角对比刘忆苦似乎一无是处，于是只好陷入幻想的英勇中，最终在现实的一地鸡毛中行懦弱苟且之事却被米兰反杀）阴影之下  \r\n名曰阳光灿烂，实则为之炫目 深感卑微阴湿\r\n\r\n\r\n\r\n*爸爸教给我们的，道理未必错误，践行仰仗环境。*\r\n\r\n\r\n*浪漫的哈尼 战争与和平又何尝不是武侠呢？*\r\n\r\n\r\n*🦌般的小明寻找那个可以庇佑他的树 奔波于哈尼滑头乃至校医 遇到稚&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/020.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;Blue Gate Crossing&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;非常好 满满青春味 使我的尸体微暖  \r\n关于蓝色大门，还有许多充满韵味的台词，可惜笔者观影时过于沉浸没怎么截图 譬如下面这段  \r\n“我叫张士豪，游泳队，吉他社，我还不错啊！”  \r\n即使过了三四个月，编辑此文时脑中依然能响起少年这句自信的自我介绍\r\n\r\n\r\n\r\n*还好我的青春尚没有那么多孟克柔式困扰，只要操心张士豪操心的就行了，余下皆是欢声笑语。*\r\n\r\n\r\n\r\n*恰到好处的关于青春的感受*  \r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --&amp;gt;\r\n首次编辑时间：202507201126\r\n最后编辑时间：202508&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/030.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;Cinema Paradiso&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;意大利作品 基本只看过  \r\n美丽人生 教父 天堂电影院  \r\n观念里 意大利是一个落后的国家 观影时不解于这鸟不拉屎的地方竟然还有电影这么现代的东西 而且竟然有这么多的优秀电影\r\n\r\n\r\n*主角与其领路人老登的情谊 领路人老登吃了没文化的亏  \r\n在电影这一艺术领域从事着如车间工人般重复且危险的体力劳动  \r\n不忍主角对电影的热爱被埋没 劝说他接受教育*\r\n\r\n\r\n*无数先者的锚已抛在沙滩上 故事还会继续吗  \r\n指引他向外面的世界 危险且缤纷*\r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --&amp;gt;\r\n首次编辑时间：&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/040.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;Dead Poets Society&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;o captain,my captain!  \r\n  \r\n\r\n令人热泪盈眶的作品  \r\n使我想起闻香识女人 虽然结果大相径庭  \r\n死亡诗社的各位终究没有那位老绅士站出来为他们辩护而屈服于校方压力 更有甚者主动卖师求荣  \r\n但正如rat所说  \r\n“Mr.Keating必须为Neil的死负责 不然难道是谁？ 学校管理层吗 Mr.Perry吗?”  \r\n“Believe what you want,but I say let Keating fry.\r\nI mean,why ruin our lives?”  \r\n  \r\n事实如此，逼走Mr.Keating的不是一心拥护他的学生们，甚至不是作为&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/050.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;Fight Club&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;简单写一下 累了（阿b有个分析的挺不错的[^为什么《搏击俱乐部》有毒？]）\r\n\r\n*死亡诗社对于成为millionares,movie god,rock star给出的方案是carpe diem(亦即seize the day)*\r\n\r\n[^为什么《搏击俱乐部》有毒？]:https://www.bilibili.com/video/BV18zxseCEPj/?share_source=copy_web&amp;vd_source=85028746d21f712d55ccb19b328fbb9c\r\n\r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n\r\n&amp;lt;!-- 文章编&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/060.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;Green Book&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;本来想截那段经典的  \r\n“If I&#39;m not black enough, and if I&#39;m not white enough, and if I&#39;m not man enough, then tell me , what am I?”  \r\n可惜看的时候没有截全 写这篇文章的时候已经删掉了这部电影（受限于捉襟见肘的磁盘容量）【取证也干了】\r\n\r\n*Don Shirlry的心声*\r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --&amp;gt;\r\n首次编辑时间：202508151131\r\n最后编辑时间：20250819164&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/070.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;Raise The Red Lantern&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;一镜到底早期作品\r\n\r\n\r\n*心比天高。拎不清。又蠢又坏。仗着背后有二太太就敢跟四太太闹 最终也是香消玉殒。她该恨的根本不是四太太，让她恨封建的制度又过于不切实际，与其说她是囿于局限性，不如说是她拎不清，丫鬟的命想着做太太，老爷捏两把就以为可以跨越阶层。话虽如此，看着她在太太享受锤脚时期盼地将脚架在圆凳上幻想自己可以做上太太点灯仍不免同情。*\r\n\r\n*三太太是最为清醒的一个，出演最爱老爷、为老爷争风吃醋的娇太太，心里装着的是高医生。  \r\n有影评说她寄希望于高医生能带她远走高飞，实际上仍是把自身托付给另一个老爷  \r\n我认为不然，她只是在追寻自己的爱情罢了，她的权势地位物质等已经通过老爷的宠爱&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/080.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;Source Code&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;对科幻题材不是很感兴趣\r\n\r\n*设定*\r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --&amp;gt;\r\n首次编辑时间：202508151131\r\n最后编辑时间：202508191645\r\n&amp;lt;!-- 编辑时间信息结束 --&amp;gt;&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/090.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;The Last Emperor&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;*令人动容的道别，现场演出的友谊地久天长更渲染了离情别绪，却又不得不感慨溥仪对于礼教或者说王室的排场/仪式感的贯彻已然入肌入理——他依然保持着优雅*  \r\n\r\n*有个小彩蛋是友谊地久天长这首曲子也正是来自庄士敦的故乡——苏格兰*\r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --&amp;gt;\r\n首次编辑时间：202508151131\r\n最后编辑时间：202508191645\r\n&amp;lt;!-- 编辑时间信息结束 --&amp;gt;&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/100.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;Yi Yi&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;可惜看的时候没截几张图  \r\n看罢只觉怅惘丝丝\r\n\r\n\r\n*敏敏所描绘的空心的感觉 在发现生活的一地鸡毛后于是转身向山里走去【doge】  \r\n回来却领悟山的后面还是山【欧阳锋所言极是】*\r\n\r\n*片中的这个人物相当超脱啊*\r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --&amp;gt;\r\n首次编辑时间：202508151131\r\n最后编辑时间：202508191645\r\n&amp;lt;!-- 编辑时间信息结束 --&amp;gt;&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/110.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;A Man Called Otto&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;杀死那个叫奥托的男人[doge]  \r\n笔者这里看的是美版 后来经朋友提醒才发现有两个版本  \r\n明天再看看瑞典原版  \r\n\r\n笔者后来查了下，根据奥托墓碑上的出生年份1955年，假设其大约是18-25岁参兵即1973-1980，约莫是越南战争结束前后。1973年美国废除了征兵制度，奥托的参军只能是自愿参军，而彼时之美国，青年们的反战情绪严重，摇滚文化盛行（如约翰列侬的give peace a chance），可奥托却为无法参军所懊恼，可见奥托确实是一个活在旧时代的人【笑】（不过奥托参军的动机也有经济因素的考量：父母双亡的他无法从兜里多掏出一份火车票钱、请心仪的女子共进晚餐却无法为自己负担一份&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/120.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;A Man Called Ove&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;以下欧维指代该片亦即直接从小说改的瑞典原版，奥托指代翻拍的美版  \r\n由于笔者没看过也不打算看小说原版，故以下评论不涉及对原著还原程度的评价，仅仅出于笔者对于导演表达方式的主观的考量。  \r\n\r\n相较于欧维 奥托对于回忆的处理更讨喜一点，奥托会在回忆进行到他印象深刻的地方时跟着念出来，仿佛他活在那段回忆中，更能表现奥托对于过去的沉湎，于此同时也更表现了奥托此刻濒死的状态。  \r\n奥托选择了一家更接地气的餐馆，当还不是他妻子的妻子突然啃上去的时候，餐馆里的人们都站起来鼓掌了，而欧维选择的餐厅更高雅，他们突然啃上的时候可以说是旁若无人，边上那桌也是想看但不敢看，再隔远一点的人好像压根没发现。  \r&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/130.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;The Phoenician Scheme&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;韦斯安德森的新作    \r\n之前看过他的布达佩斯大饭店，本片风格与之极其相近，片中的人物都极其淡定地做一些惊世骇俗的事情(例如本片主角就极其淡定地把飞行员弹出飞机并成功迫降飞机)。  \r\n坦率地讲笔者没有看懂这部作品，本片叙事似乎没有布达佩斯大饭店那么有逻辑，其中还融入了一些宗教的明显超现实象征性的镜头与台词，~~要想只看一遍就品味其中意味对于笔者来说还是太困难了~~。  \r\n总的来说这部电影非常荒诞，但笔者不打算看第二遍，故选择去b站看拉片（由于这部电影还比较新 拉片比较少 去阿b逛了一圈基本都是剧情解说而非拉片 ~~不过视频底下的评论区还是挺有意思的~~）~~     \r\n韦斯安德森的镜头&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;movie&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;记录一些电影，起源于向朋友推荐电影却苦于无法从过去一一品味的电影中捡出些佳作。\r\n\r\n 列表\r\n- 牯岭街少年杀人事件\r\n- 蓝色大门\r\n- 天堂电影院\r\n- 死亡诗社\r\n- 搏击俱乐部\r\n- 绿皮书\r\n- 大红灯笼高高挂\r\n- 源代码\r\n- 末代皇帝\r\n- 一一\r\n- 生无可恋的奥托\r\n- 一个叫欧维的男人决定去死\r\n- 腓尼基计划\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --\r\n首次编辑时间：202508150901\r\n最后编辑时间：202508201147\r\n&amp;lt;!-- 编辑时间信息结束 --&amp;gt;&quot;
+      }
+    ],
+    &quot;originPosts&quot;: [
+      {
+        &quot;url&quot;: &quot;/AboutMe.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;html&quot;,
+        &quot;date&quot;: &quot;2025-08-20 21:27:51&quot;,
+        &quot;capture&quot;: &quot;&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/api-examples.html&quot;,
+        &quot;frontmatter&quot;: {
+          &quot;outline&quot;: &quot;deep&quot;
+        },
+        &quot;title&quot;: &quot;Runtime API Examples&quot;,
+        &quot;date&quot;: &quot;2025-08-20 20:40:59&quot;,
+        &quot;capture&quot;: &quot;Runtime API Examples\nThis page demonstrates usage of some of the runtime APIs provided by VitePress.\nThe main `useData()` API can be used to access site, theme, and page data for the current page. It works in both `.md` and `.vue` files:\n```md\n&amp;lt;script setup\nimport { useData } from &#39;vitepress&#39;\ncon&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/markdown-examples.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;Markdown Extension Examples&quot;,
+        &quot;date&quot;: &quot;2025-08-20 20:40:59&quot;,
+        &quot;capture&quot;: &quot;This page demonstrates some of the built-in markdown extensions provided by VitePress.\n Syntax Highlighting\nVitePress provides Syntax Highlighting powered by Shiki, with additional features like line-highlighting:\nInput\n````md\n```js{4}\nexport default {\n  data () {\n    return {\n      msg: &#39;Highlighte&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/010.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;A Brighter Summer Day&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;阳光灿烂的日子（雾）  \r\n不过本片确实有与其相似的地方  \r\n同样的少年遇到了一个灿烂的女孩  \r\n少年的爱都笼罩在那个更强的他者（牯岭街之哈尼之风光&amp;romance、校医之于小明母亲的切身好处、小马之家境乃至滑头之武力；于阳光灿烂而言，主角对比刘忆苦似乎一无是处，于是只好陷入幻想的英勇中，最终在现实的一地鸡毛中行懦弱苟且之事却被米兰反杀）阴影之下  \r\n名曰阳光灿烂，实则为之炫目 深感卑微阴湿\r\n\r\n\r\n\r\n*爸爸教给我们的，道理未必错误，践行仰仗环境。*\r\n\r\n\r\n*浪漫的哈尼 战争与和平又何尝不是武侠呢？*\r\n\r\n\r\n*🦌般的小明寻找那个可以庇佑他的树 奔波于哈尼滑头乃至校医 遇到稚&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/020.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;Blue Gate Crossing&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;非常好 满满青春味 使我的尸体微暖  \r\n关于蓝色大门，还有许多充满韵味的台词，可惜笔者观影时过于沉浸没怎么截图 譬如下面这段  \r\n“我叫张士豪，游泳队，吉他社，我还不错啊！”  \r\n即使过了三四个月，编辑此文时脑中依然能响起少年这句自信的自我介绍\r\n\r\n\r\n\r\n*还好我的青春尚没有那么多孟克柔式困扰，只要操心张士豪操心的就行了，余下皆是欢声笑语。*\r\n\r\n\r\n\r\n*恰到好处的关于青春的感受*  \r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --&amp;gt;\r\n首次编辑时间：202507201126\r\n最后编辑时间：202508&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/030.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;Cinema Paradiso&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;意大利作品 基本只看过  \r\n美丽人生 教父 天堂电影院  \r\n观念里 意大利是一个落后的国家 观影时不解于这鸟不拉屎的地方竟然还有电影这么现代的东西 而且竟然有这么多的优秀电影\r\n\r\n\r\n*主角与其领路人老登的情谊 领路人老登吃了没文化的亏  \r\n在电影这一艺术领域从事着如车间工人般重复且危险的体力劳动  \r\n不忍主角对电影的热爱被埋没 劝说他接受教育*\r\n\r\n\r\n*无数先者的锚已抛在沙滩上 故事还会继续吗  \r\n指引他向外面的世界 危险且缤纷*\r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --&amp;gt;\r\n首次编辑时间：&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/040.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;Dead Poets Society&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;o captain,my captain!  \r\n  \r\n\r\n令人热泪盈眶的作品  \r\n使我想起闻香识女人 虽然结果大相径庭  \r\n死亡诗社的各位终究没有那位老绅士站出来为他们辩护而屈服于校方压力 更有甚者主动卖师求荣  \r\n但正如rat所说  \r\n“Mr.Keating必须为Neil的死负责 不然难道是谁？ 学校管理层吗 Mr.Perry吗?”  \r\n“Believe what you want,but I say let Keating fry.\r\nI mean,why ruin our lives?”  \r\n  \r\n事实如此，逼走Mr.Keating的不是一心拥护他的学生们，甚至不是作为&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/050.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;Fight Club&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;简单写一下 累了（阿b有个分析的挺不错的[^为什么《搏击俱乐部》有毒？]）\r\n\r\n*死亡诗社对于成为millionares,movie god,rock star给出的方案是carpe diem(亦即seize the day)*\r\n\r\n[^为什么《搏击俱乐部》有毒？]:https://www.bilibili.com/video/BV18zxseCEPj/?share_source=copy_web&amp;vd_source=85028746d21f712d55ccb19b328fbb9c\r\n\r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n\r\n&amp;lt;!-- 文章编&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/060.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;Green Book&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;本来想截那段经典的  \r\n“If I&#39;m not black enough, and if I&#39;m not white enough, and if I&#39;m not man enough, then tell me , what am I?”  \r\n可惜看的时候没有截全 写这篇文章的时候已经删掉了这部电影（受限于捉襟见肘的磁盘容量）【取证也干了】\r\n\r\n*Don Shirlry的心声*\r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --&amp;gt;\r\n首次编辑时间：202508151131\r\n最后编辑时间：20250819164&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/070.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;Raise The Red Lantern&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;一镜到底早期作品\r\n\r\n\r\n*心比天高。拎不清。又蠢又坏。仗着背后有二太太就敢跟四太太闹 最终也是香消玉殒。她该恨的根本不是四太太，让她恨封建的制度又过于不切实际，与其说她是囿于局限性，不如说是她拎不清，丫鬟的命想着做太太，老爷捏两把就以为可以跨越阶层。话虽如此，看着她在太太享受锤脚时期盼地将脚架在圆凳上幻想自己可以做上太太点灯仍不免同情。*\r\n\r\n*三太太是最为清醒的一个，出演最爱老爷、为老爷争风吃醋的娇太太，心里装着的是高医生。  \r\n有影评说她寄希望于高医生能带她远走高飞，实际上仍是把自身托付给另一个老爷  \r\n我认为不然，她只是在追寻自己的爱情罢了，她的权势地位物质等已经通过老爷的宠爱&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/080.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;Source Code&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;对科幻题材不是很感兴趣\r\n\r\n*设定*\r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --&amp;gt;\r\n首次编辑时间：202508151131\r\n最后编辑时间：202508191645\r\n&amp;lt;!-- 编辑时间信息结束 --&amp;gt;&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/090.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;The Last Emperor&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;*令人动容的道别，现场演出的友谊地久天长更渲染了离情别绪，却又不得不感慨溥仪对于礼教或者说王室的排场/仪式感的贯彻已然入肌入理——他依然保持着优雅*  \r\n\r\n*有个小彩蛋是友谊地久天长这首曲子也正是来自庄士敦的故乡——苏格兰*\r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --&amp;gt;\r\n首次编辑时间：202508151131\r\n最后编辑时间：202508191645\r\n&amp;lt;!-- 编辑时间信息结束 --&amp;gt;&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/100.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;Yi Yi&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;可惜看的时候没截几张图  \r\n看罢只觉怅惘丝丝\r\n\r\n\r\n*敏敏所描绘的空心的感觉 在发现生活的一地鸡毛后于是转身向山里走去【doge】  \r\n回来却领悟山的后面还是山【欧阳锋所言极是】*\r\n\r\n*片中的这个人物相当超脱啊*\r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --&amp;gt;\r\n首次编辑时间：202508151131\r\n最后编辑时间：202508191645\r\n&amp;lt;!-- 编辑时间信息结束 --&amp;gt;&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/110.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;A Man Called Otto&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;杀死那个叫奥托的男人[doge]  \r\n笔者这里看的是美版 后来经朋友提醒才发现有两个版本  \r\n明天再看看瑞典原版  \r\n\r\n笔者后来查了下，根据奥托墓碑上的出生年份1955年，假设其大约是18-25岁参兵即1973-1980，约莫是越南战争结束前后。1973年美国废除了征兵制度，奥托的参军只能是自愿参军，而彼时之美国，青年们的反战情绪严重，摇滚文化盛行（如约翰列侬的give peace a chance），可奥托却为无法参军所懊恼，可见奥托确实是一个活在旧时代的人【笑】（不过奥托参军的动机也有经济因素的考量：父母双亡的他无法从兜里多掏出一份火车票钱、请心仪的女子共进晚餐却无法为自己负担一份&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/120.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;A Man Called Ove&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;以下欧维指代该片亦即直接从小说改的瑞典原版，奥托指代翻拍的美版  \r\n由于笔者没看过也不打算看小说原版，故以下评论不涉及对原著还原程度的评价，仅仅出于笔者对于导演表达方式的主观的考量。  \r\n\r\n相较于欧维 奥托对于回忆的处理更讨喜一点，奥托会在回忆进行到他印象深刻的地方时跟着念出来，仿佛他活在那段回忆中，更能表现奥托对于过去的沉湎，于此同时也更表现了奥托此刻濒死的状态。  \r\n奥托选择了一家更接地气的餐馆，当还不是他妻子的妻子突然啃上去的时候，餐馆里的人们都站起来鼓掌了，而欧维选择的餐厅更高雅，他们突然啃上的时候可以说是旁若无人，边上那桌也是想看但不敢看，再隔远一点的人好像压根没发现。  \r&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/130.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;The Phoenician Scheme&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;韦斯安德森的新作    \r\n之前看过他的布达佩斯大饭店，本片风格与之极其相近，片中的人物都极其淡定地做一些惊世骇俗的事情(例如本片主角就极其淡定地把飞行员弹出飞机并成功迫降飞机)。  \r\n坦率地讲笔者没有看懂这部作品，本片叙事似乎没有布达佩斯大饭店那么有逻辑，其中还融入了一些宗教的明显超现实象征性的镜头与台词，~~要想只看一遍就品味其中意味对于笔者来说还是太困难了~~。  \r\n总的来说这部电影非常荒诞，但笔者不打算看第二遍，故选择去b站看拉片（由于这部电影还比较新 拉片比较少 去阿b逛了一圈基本都是剧情解说而非拉片 ~~不过视频底下的评论区还是挺有意思的~~）~~     \r\n韦斯安德森的镜头&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;movie&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;记录一些电影，起源于向朋友推荐电影却苦于无法从过去一一品味的电影中捡出些佳作。\r\n\r\n 列表\r\n- 牯岭街少年杀人事件\r\n- 蓝色大门\r\n- 天堂电影院\r\n- 死亡诗社\r\n- 搏击俱乐部\r\n- 绿皮书\r\n- 大红灯笼高高挂\r\n- 源代码\r\n- 末代皇帝\r\n- 一一\r\n- 生无可恋的奥托\r\n- 一个叫欧维的男人决定去死\r\n- 腓尼基计划\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --\r\n首次编辑时间：202508150901\r\n最后编辑时间：202508201147\r\n&amp;lt;!-- 编辑时间信息结束 --&amp;gt;&quot;
+      }
+    ],
+    &quot;sortPostsByDateAndSticky&quot;: [
+      {
+        &quot;url&quot;: &quot;/movies/010.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;A Brighter Summer Day&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;阳光灿烂的日子（雾）  \r\n不过本片确实有与其相似的地方  \r\n同样的少年遇到了一个灿烂的女孩  \r\n少年的爱都笼罩在那个更强的他者（牯岭街之哈尼之风光&amp;romance、校医之于小明母亲的切身好处、小马之家境乃至滑头之武力；于阳光灿烂而言，主角对比刘忆苦似乎一无是处，于是只好陷入幻想的英勇中，最终在现实的一地鸡毛中行懦弱苟且之事却被米兰反杀）阴影之下  \r\n名曰阳光灿烂，实则为之炫目 深感卑微阴湿\r\n\r\n\r\n\r\n*爸爸教给我们的，道理未必错误，践行仰仗环境。*\r\n\r\n\r\n*浪漫的哈尼 战争与和平又何尝不是武侠呢？*\r\n\r\n\r\n*🦌般的小明寻找那个可以庇佑他的树 奔波于哈尼滑头乃至校医 遇到稚&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/020.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;Blue Gate Crossing&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;非常好 满满青春味 使我的尸体微暖  \r\n关于蓝色大门，还有许多充满韵味的台词，可惜笔者观影时过于沉浸没怎么截图 譬如下面这段  \r\n“我叫张士豪，游泳队，吉他社，我还不错啊！”  \r\n即使过了三四个月，编辑此文时脑中依然能响起少年这句自信的自我介绍\r\n\r\n\r\n\r\n*还好我的青春尚没有那么多孟克柔式困扰，只要操心张士豪操心的就行了，余下皆是欢声笑语。*\r\n\r\n\r\n\r\n*恰到好处的关于青春的感受*  \r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --&amp;gt;\r\n首次编辑时间：202507201126\r\n最后编辑时间：202508&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/030.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;Cinema Paradiso&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;意大利作品 基本只看过  \r\n美丽人生 教父 天堂电影院  \r\n观念里 意大利是一个落后的国家 观影时不解于这鸟不拉屎的地方竟然还有电影这么现代的东西 而且竟然有这么多的优秀电影\r\n\r\n\r\n*主角与其领路人老登的情谊 领路人老登吃了没文化的亏  \r\n在电影这一艺术领域从事着如车间工人般重复且危险的体力劳动  \r\n不忍主角对电影的热爱被埋没 劝说他接受教育*\r\n\r\n\r\n*无数先者的锚已抛在沙滩上 故事还会继续吗  \r\n指引他向外面的世界 危险且缤纷*\r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --&amp;gt;\r\n首次编辑时间：&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/040.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;Dead Poets Society&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;o captain,my captain!  \r\n  \r\n\r\n令人热泪盈眶的作品  \r\n使我想起闻香识女人 虽然结果大相径庭  \r\n死亡诗社的各位终究没有那位老绅士站出来为他们辩护而屈服于校方压力 更有甚者主动卖师求荣  \r\n但正如rat所说  \r\n“Mr.Keating必须为Neil的死负责 不然难道是谁？ 学校管理层吗 Mr.Perry吗?”  \r\n“Believe what you want,but I say let Keating fry.\r\nI mean,why ruin our lives?”  \r\n  \r\n事实如此，逼走Mr.Keating的不是一心拥护他的学生们，甚至不是作为&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/050.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;Fight Club&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;简单写一下 累了（阿b有个分析的挺不错的[^为什么《搏击俱乐部》有毒？]）\r\n\r\n*死亡诗社对于成为millionares,movie god,rock star给出的方案是carpe diem(亦即seize the day)*\r\n\r\n[^为什么《搏击俱乐部》有毒？]:https://www.bilibili.com/video/BV18zxseCEPj/?share_source=copy_web&amp;vd_source=85028746d21f712d55ccb19b328fbb9c\r\n\r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n\r\n&amp;lt;!-- 文章编&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/060.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;Green Book&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;本来想截那段经典的  \r\n“If I&#39;m not black enough, and if I&#39;m not white enough, and if I&#39;m not man enough, then tell me , what am I?”  \r\n可惜看的时候没有截全 写这篇文章的时候已经删掉了这部电影（受限于捉襟见肘的磁盘容量）【取证也干了】\r\n\r\n*Don Shirlry的心声*\r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --&amp;gt;\r\n首次编辑时间：202508151131\r\n最后编辑时间：20250819164&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/070.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;Raise The Red Lantern&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;一镜到底早期作品\r\n\r\n\r\n*心比天高。拎不清。又蠢又坏。仗着背后有二太太就敢跟四太太闹 最终也是香消玉殒。她该恨的根本不是四太太，让她恨封建的制度又过于不切实际，与其说她是囿于局限性，不如说是她拎不清，丫鬟的命想着做太太，老爷捏两把就以为可以跨越阶层。话虽如此，看着她在太太享受锤脚时期盼地将脚架在圆凳上幻想自己可以做上太太点灯仍不免同情。*\r\n\r\n*三太太是最为清醒的一个，出演最爱老爷、为老爷争风吃醋的娇太太，心里装着的是高医生。  \r\n有影评说她寄希望于高医生能带她远走高飞，实际上仍是把自身托付给另一个老爷  \r\n我认为不然，她只是在追寻自己的爱情罢了，她的权势地位物质等已经通过老爷的宠爱&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/080.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;Source Code&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;对科幻题材不是很感兴趣\r\n\r\n*设定*\r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --&amp;gt;\r\n首次编辑时间：202508151131\r\n最后编辑时间：202508191645\r\n&amp;lt;!-- 编辑时间信息结束 --&amp;gt;&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/090.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;The Last Emperor&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;*令人动容的道别，现场演出的友谊地久天长更渲染了离情别绪，却又不得不感慨溥仪对于礼教或者说王室的排场/仪式感的贯彻已然入肌入理——他依然保持着优雅*  \r\n\r\n*有个小彩蛋是友谊地久天长这首曲子也正是来自庄士敦的故乡——苏格兰*\r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --&amp;gt;\r\n首次编辑时间：202508151131\r\n最后编辑时间：202508191645\r\n&amp;lt;!-- 编辑时间信息结束 --&amp;gt;&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/100.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;Yi Yi&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;可惜看的时候没截几张图  \r\n看罢只觉怅惘丝丝\r\n\r\n\r\n*敏敏所描绘的空心的感觉 在发现生活的一地鸡毛后于是转身向山里走去【doge】  \r\n回来却领悟山的后面还是山【欧阳锋所言极是】*\r\n\r\n*片中的这个人物相当超脱啊*\r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --&amp;gt;\r\n首次编辑时间：202508151131\r\n最后编辑时间：202508191645\r\n&amp;lt;!-- 编辑时间信息结束 --&amp;gt;&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/110.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;A Man Called Otto&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;杀死那个叫奥托的男人[doge]  \r\n笔者这里看的是美版 后来经朋友提醒才发现有两个版本  \r\n明天再看看瑞典原版  \r\n\r\n笔者后来查了下，根据奥托墓碑上的出生年份1955年，假设其大约是18-25岁参兵即1973-1980，约莫是越南战争结束前后。1973年美国废除了征兵制度，奥托的参军只能是自愿参军，而彼时之美国，青年们的反战情绪严重，摇滚文化盛行（如约翰列侬的give peace a chance），可奥托却为无法参军所懊恼，可见奥托确实是一个活在旧时代的人【笑】（不过奥托参军的动机也有经济因素的考量：父母双亡的他无法从兜里多掏出一份火车票钱、请心仪的女子共进晚餐却无法为自己负担一份&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/120.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;A Man Called Ove&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;以下欧维指代该片亦即直接从小说改的瑞典原版，奥托指代翻拍的美版  \r\n由于笔者没看过也不打算看小说原版，故以下评论不涉及对原著还原程度的评价，仅仅出于笔者对于导演表达方式的主观的考量。  \r\n\r\n相较于欧维 奥托对于回忆的处理更讨喜一点，奥托会在回忆进行到他印象深刻的地方时跟着念出来，仿佛他活在那段回忆中，更能表现奥托对于过去的沉湎，于此同时也更表现了奥托此刻濒死的状态。  \r\n奥托选择了一家更接地气的餐馆，当还不是他妻子的妻子突然啃上去的时候，餐馆里的人们都站起来鼓掌了，而欧维选择的餐厅更高雅，他们突然啃上的时候可以说是旁若无人，边上那桌也是想看但不敢看，再隔远一点的人好像压根没发现。  \r&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/130.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;The Phoenician Scheme&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;韦斯安德森的新作    \r\n之前看过他的布达佩斯大饭店，本片风格与之极其相近，片中的人物都极其淡定地做一些惊世骇俗的事情(例如本片主角就极其淡定地把飞行员弹出飞机并成功迫降飞机)。  \r\n坦率地讲笔者没有看懂这部作品，本片叙事似乎没有布达佩斯大饭店那么有逻辑，其中还融入了一些宗教的明显超现实象征性的镜头与台词，~~要想只看一遍就品味其中意味对于笔者来说还是太困难了~~。  \r\n总的来说这部电影非常荒诞，但笔者不打算看第二遍，故选择去b站看拉片（由于这部电影还比较新 拉片比较少 去阿b逛了一圈基本都是剧情解说而非拉片 ~~不过视频底下的评论区还是挺有意思的~~）~~     \r\n韦斯安德森的镜头&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;movie&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;记录一些电影，起源于向朋友推荐电影却苦于无法从过去一一品味的电影中捡出些佳作。\r\n\r\n 列表\r\n- 牯岭街少年杀人事件\r\n- 蓝色大门\r\n- 天堂电影院\r\n- 死亡诗社\r\n- 搏击俱乐部\r\n- 绿皮书\r\n- 大红灯笼高高挂\r\n- 源代码\r\n- 末代皇帝\r\n- 一一\r\n- 生无可恋的奥托\r\n- 一个叫欧维的男人决定去死\r\n- 腓尼基计划\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --\r\n首次编辑时间：202508150901\r\n最后编辑时间：202508201147\r\n&amp;lt;!-- 编辑时间信息结束 --&amp;gt;&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/AboutMe.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;html&quot;,
+        &quot;date&quot;: &quot;2025-08-20 21:27:51&quot;,
+        &quot;capture&quot;: &quot;&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/api-examples.html&quot;,
+        &quot;frontmatter&quot;: {
+          &quot;outline&quot;: &quot;deep&quot;
+        },
+        &quot;title&quot;: &quot;Runtime API Examples&quot;,
+        &quot;date&quot;: &quot;2025-08-20 20:40:59&quot;,
+        &quot;capture&quot;: &quot;Runtime API Examples\nThis page demonstrates usage of some of the runtime APIs provided by VitePress.\nThe main `useData()` API can be used to access site, theme, and page data for the current page. It works in both `.md` and `.vue` files:\n```md\n&amp;lt;script setup\nimport { useData } from &#39;vitepress&#39;\ncon&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/markdown-examples.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;Markdown Extension Examples&quot;,
+        &quot;date&quot;: &quot;2025-08-20 20:40:59&quot;,
+        &quot;capture&quot;: &quot;This page demonstrates some of the built-in markdown extensions provided by VitePress.\n Syntax Highlighting\nVitePress provides Syntax Highlighting powered by Shiki, with additional features like line-highlighting:\nInput\n````md\n```js{4}\nexport default {\n  data () {\n    return {\n      msg: &#39;Highlighte&quot;
+      }
+    ],
+    &quot;sortPostsByDate&quot;: [
+      {
+        &quot;url&quot;: &quot;/movies/010.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;A Brighter Summer Day&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;阳光灿烂的日子（雾）  \r\n不过本片确实有与其相似的地方  \r\n同样的少年遇到了一个灿烂的女孩  \r\n少年的爱都笼罩在那个更强的他者（牯岭街之哈尼之风光&amp;romance、校医之于小明母亲的切身好处、小马之家境乃至滑头之武力；于阳光灿烂而言，主角对比刘忆苦似乎一无是处，于是只好陷入幻想的英勇中，最终在现实的一地鸡毛中行懦弱苟且之事却被米兰反杀）阴影之下  \r\n名曰阳光灿烂，实则为之炫目 深感卑微阴湿\r\n\r\n\r\n\r\n*爸爸教给我们的，道理未必错误，践行仰仗环境。*\r\n\r\n\r\n*浪漫的哈尼 战争与和平又何尝不是武侠呢？*\r\n\r\n\r\n*🦌般的小明寻找那个可以庇佑他的树 奔波于哈尼滑头乃至校医 遇到稚&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/020.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;Blue Gate Crossing&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;非常好 满满青春味 使我的尸体微暖  \r\n关于蓝色大门，还有许多充满韵味的台词，可惜笔者观影时过于沉浸没怎么截图 譬如下面这段  \r\n“我叫张士豪，游泳队，吉他社，我还不错啊！”  \r\n即使过了三四个月，编辑此文时脑中依然能响起少年这句自信的自我介绍\r\n\r\n\r\n\r\n*还好我的青春尚没有那么多孟克柔式困扰，只要操心张士豪操心的就行了，余下皆是欢声笑语。*\r\n\r\n\r\n\r\n*恰到好处的关于青春的感受*  \r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --&amp;gt;\r\n首次编辑时间：202507201126\r\n最后编辑时间：202508&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/030.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;Cinema Paradiso&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;意大利作品 基本只看过  \r\n美丽人生 教父 天堂电影院  \r\n观念里 意大利是一个落后的国家 观影时不解于这鸟不拉屎的地方竟然还有电影这么现代的东西 而且竟然有这么多的优秀电影\r\n\r\n\r\n*主角与其领路人老登的情谊 领路人老登吃了没文化的亏  \r\n在电影这一艺术领域从事着如车间工人般重复且危险的体力劳动  \r\n不忍主角对电影的热爱被埋没 劝说他接受教育*\r\n\r\n\r\n*无数先者的锚已抛在沙滩上 故事还会继续吗  \r\n指引他向外面的世界 危险且缤纷*\r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --&amp;gt;\r\n首次编辑时间：&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/040.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;Dead Poets Society&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;o captain,my captain!  \r\n  \r\n\r\n令人热泪盈眶的作品  \r\n使我想起闻香识女人 虽然结果大相径庭  \r\n死亡诗社的各位终究没有那位老绅士站出来为他们辩护而屈服于校方压力 更有甚者主动卖师求荣  \r\n但正如rat所说  \r\n“Mr.Keating必须为Neil的死负责 不然难道是谁？ 学校管理层吗 Mr.Perry吗?”  \r\n“Believe what you want,but I say let Keating fry.\r\nI mean,why ruin our lives?”  \r\n  \r\n事实如此，逼走Mr.Keating的不是一心拥护他的学生们，甚至不是作为&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/050.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;Fight Club&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;简单写一下 累了（阿b有个分析的挺不错的[^为什么《搏击俱乐部》有毒？]）\r\n\r\n*死亡诗社对于成为millionares,movie god,rock star给出的方案是carpe diem(亦即seize the day)*\r\n\r\n[^为什么《搏击俱乐部》有毒？]:https://www.bilibili.com/video/BV18zxseCEPj/?share_source=copy_web&amp;vd_source=85028746d21f712d55ccb19b328fbb9c\r\n\r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n\r\n&amp;lt;!-- 文章编&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/060.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;Green Book&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;本来想截那段经典的  \r\n“If I&#39;m not black enough, and if I&#39;m not white enough, and if I&#39;m not man enough, then tell me , what am I?”  \r\n可惜看的时候没有截全 写这篇文章的时候已经删掉了这部电影（受限于捉襟见肘的磁盘容量）【取证也干了】\r\n\r\n*Don Shirlry的心声*\r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --&amp;gt;\r\n首次编辑时间：202508151131\r\n最后编辑时间：20250819164&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/070.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;Raise The Red Lantern&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;一镜到底早期作品\r\n\r\n\r\n*心比天高。拎不清。又蠢又坏。仗着背后有二太太就敢跟四太太闹 最终也是香消玉殒。她该恨的根本不是四太太，让她恨封建的制度又过于不切实际，与其说她是囿于局限性，不如说是她拎不清，丫鬟的命想着做太太，老爷捏两把就以为可以跨越阶层。话虽如此，看着她在太太享受锤脚时期盼地将脚架在圆凳上幻想自己可以做上太太点灯仍不免同情。*\r\n\r\n*三太太是最为清醒的一个，出演最爱老爷、为老爷争风吃醋的娇太太，心里装着的是高医生。  \r\n有影评说她寄希望于高医生能带她远走高飞，实际上仍是把自身托付给另一个老爷  \r\n我认为不然，她只是在追寻自己的爱情罢了，她的权势地位物质等已经通过老爷的宠爱&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/080.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;Source Code&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;对科幻题材不是很感兴趣\r\n\r\n*设定*\r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --&amp;gt;\r\n首次编辑时间：202508151131\r\n最后编辑时间：202508191645\r\n&amp;lt;!-- 编辑时间信息结束 --&amp;gt;&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/090.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;The Last Emperor&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;*令人动容的道别，现场演出的友谊地久天长更渲染了离情别绪，却又不得不感慨溥仪对于礼教或者说王室的排场/仪式感的贯彻已然入肌入理——他依然保持着优雅*  \r\n\r\n*有个小彩蛋是友谊地久天长这首曲子也正是来自庄士敦的故乡——苏格兰*\r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --&amp;gt;\r\n首次编辑时间：202508151131\r\n最后编辑时间：202508191645\r\n&amp;lt;!-- 编辑时间信息结束 --&amp;gt;&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/100.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;Yi Yi&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;可惜看的时候没截几张图  \r\n看罢只觉怅惘丝丝\r\n\r\n\r\n*敏敏所描绘的空心的感觉 在发现生活的一地鸡毛后于是转身向山里走去【doge】  \r\n回来却领悟山的后面还是山【欧阳锋所言极是】*\r\n\r\n*片中的这个人物相当超脱啊*\r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --&amp;gt;\r\n首次编辑时间：202508151131\r\n最后编辑时间：202508191645\r\n&amp;lt;!-- 编辑时间信息结束 --&amp;gt;&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/110.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;A Man Called Otto&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;杀死那个叫奥托的男人[doge]  \r\n笔者这里看的是美版 后来经朋友提醒才发现有两个版本  \r\n明天再看看瑞典原版  \r\n\r\n笔者后来查了下，根据奥托墓碑上的出生年份1955年，假设其大约是18-25岁参兵即1973-1980，约莫是越南战争结束前后。1973年美国废除了征兵制度，奥托的参军只能是自愿参军，而彼时之美国，青年们的反战情绪严重，摇滚文化盛行（如约翰列侬的give peace a chance），可奥托却为无法参军所懊恼，可见奥托确实是一个活在旧时代的人【笑】（不过奥托参军的动机也有经济因素的考量：父母双亡的他无法从兜里多掏出一份火车票钱、请心仪的女子共进晚餐却无法为自己负担一份&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/120.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;A Man Called Ove&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;以下欧维指代该片亦即直接从小说改的瑞典原版，奥托指代翻拍的美版  \r\n由于笔者没看过也不打算看小说原版，故以下评论不涉及对原著还原程度的评价，仅仅出于笔者对于导演表达方式的主观的考量。  \r\n\r\n相较于欧维 奥托对于回忆的处理更讨喜一点，奥托会在回忆进行到他印象深刻的地方时跟着念出来，仿佛他活在那段回忆中，更能表现奥托对于过去的沉湎，于此同时也更表现了奥托此刻濒死的状态。  \r\n奥托选择了一家更接地气的餐馆，当还不是他妻子的妻子突然啃上去的时候，餐馆里的人们都站起来鼓掌了，而欧维选择的餐厅更高雅，他们突然啃上的时候可以说是旁若无人，边上那桌也是想看但不敢看，再隔远一点的人好像压根没发现。  \r&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/130.movie.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;The Phoenician Scheme&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;韦斯安德森的新作    \r\n之前看过他的布达佩斯大饭店，本片风格与之极其相近，片中的人物都极其淡定地做一些惊世骇俗的事情(例如本片主角就极其淡定地把飞行员弹出飞机并成功迫降飞机)。  \r\n坦率地讲笔者没有看懂这部作品，本片叙事似乎没有布达佩斯大饭店那么有逻辑，其中还融入了一些宗教的明显超现实象征性的镜头与台词，~~要想只看一遍就品味其中意味对于笔者来说还是太困难了~~。  \r\n总的来说这部电影非常荒诞，但笔者不打算看第二遍，故选择去b站看拉片（由于这部电影还比较新 拉片比较少 去阿b逛了一圈基本都是剧情解说而非拉片 ~~不过视频底下的评论区还是挺有意思的~~）~~     \r\n韦斯安德森的镜头&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/movies/&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;movie&quot;,
+        &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+        &quot;capture&quot;: &quot;记录一些电影，起源于向朋友推荐电影却苦于无法从过去一一品味的电影中捡出些佳作。\r\n\r\n 列表\r\n- 牯岭街少年杀人事件\r\n- 蓝色大门\r\n- 天堂电影院\r\n- 死亡诗社\r\n- 搏击俱乐部\r\n- 绿皮书\r\n- 大红灯笼高高挂\r\n- 源代码\r\n- 末代皇帝\r\n- 一一\r\n- 生无可恋的奥托\r\n- 一个叫欧维的男人决定去死\r\n- 腓尼基计划\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --\r\n首次编辑时间：202508150901\r\n最后编辑时间：202508201147\r\n&amp;lt;!-- 编辑时间信息结束 --&amp;gt;&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/AboutMe.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;html&quot;,
+        &quot;date&quot;: &quot;2025-08-20 21:27:51&quot;,
+        &quot;capture&quot;: &quot;&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/api-examples.html&quot;,
+        &quot;frontmatter&quot;: {
+          &quot;outline&quot;: &quot;deep&quot;
+        },
+        &quot;title&quot;: &quot;Runtime API Examples&quot;,
+        &quot;date&quot;: &quot;2025-08-20 20:40:59&quot;,
+        &quot;capture&quot;: &quot;Runtime API Examples\nThis page demonstrates usage of some of the runtime APIs provided by VitePress.\nThe main `useData()` API can be used to access site, theme, and page data for the current page. It works in both `.md` and `.vue` files:\n```md\n&amp;lt;script setup\nimport { useData } from &#39;vitepress&#39;\ncon&quot;
+      },
+      {
+        &quot;url&quot;: &quot;/markdown-examples.html&quot;,
+        &quot;frontmatter&quot;: {},
+        &quot;title&quot;: &quot;Markdown Extension Examples&quot;,
+        &quot;date&quot;: &quot;2025-08-20 20:40:59&quot;,
+        &quot;capture&quot;: &quot;This page demonstrates some of the built-in markdown extensions provided by VitePress.\n Syntax Highlighting\nVitePress provides Syntax Highlighting powered by Shiki, with additional features like line-highlighting:\nInput\n````md\n```js{4}\nexport default {\n  data () {\n    return {\n      msg: &#39;Highlighte&quot;
+      }
+    ],
+    &quot;groupPostsByYear&quot;: {
+      &quot;2025 &quot;: [
+        {
+          &quot;url&quot;: &quot;/movies/010.movie.html&quot;,
+          &quot;frontmatter&quot;: {},
+          &quot;title&quot;: &quot;A Brighter Summer Day&quot;,
+          &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+          &quot;capture&quot;: &quot;阳光灿烂的日子（雾）  \r\n不过本片确实有与其相似的地方  \r\n同样的少年遇到了一个灿烂的女孩  \r\n少年的爱都笼罩在那个更强的他者（牯岭街之哈尼之风光&amp;romance、校医之于小明母亲的切身好处、小马之家境乃至滑头之武力；于阳光灿烂而言，主角对比刘忆苦似乎一无是处，于是只好陷入幻想的英勇中，最终在现实的一地鸡毛中行懦弱苟且之事却被米兰反杀）阴影之下  \r\n名曰阳光灿烂，实则为之炫目 深感卑微阴湿\r\n\r\n\r\n\r\n*爸爸教给我们的，道理未必错误，践行仰仗环境。*\r\n\r\n\r\n*浪漫的哈尼 战争与和平又何尝不是武侠呢？*\r\n\r\n\r\n*🦌般的小明寻找那个可以庇佑他的树 奔波于哈尼滑头乃至校医 遇到稚&quot;
+        },
+        {
+          &quot;url&quot;: &quot;/movies/020.movie.html&quot;,
+          &quot;frontmatter&quot;: {},
+          &quot;title&quot;: &quot;Blue Gate Crossing&quot;,
+          &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+          &quot;capture&quot;: &quot;非常好 满满青春味 使我的尸体微暖  \r\n关于蓝色大门，还有许多充满韵味的台词，可惜笔者观影时过于沉浸没怎么截图 譬如下面这段  \r\n“我叫张士豪，游泳队，吉他社，我还不错啊！”  \r\n即使过了三四个月，编辑此文时脑中依然能响起少年这句自信的自我介绍\r\n\r\n\r\n\r\n*还好我的青春尚没有那么多孟克柔式困扰，只要操心张士豪操心的就行了，余下皆是欢声笑语。*\r\n\r\n\r\n\r\n*恰到好处的关于青春的感受*  \r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --&amp;gt;\r\n首次编辑时间：202507201126\r\n最后编辑时间：202508&quot;
+        },
+        {
+          &quot;url&quot;: &quot;/movies/030.movie.html&quot;,
+          &quot;frontmatter&quot;: {},
+          &quot;title&quot;: &quot;Cinema Paradiso&quot;,
+          &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+          &quot;capture&quot;: &quot;意大利作品 基本只看过  \r\n美丽人生 教父 天堂电影院  \r\n观念里 意大利是一个落后的国家 观影时不解于这鸟不拉屎的地方竟然还有电影这么现代的东西 而且竟然有这么多的优秀电影\r\n\r\n\r\n*主角与其领路人老登的情谊 领路人老登吃了没文化的亏  \r\n在电影这一艺术领域从事着如车间工人般重复且危险的体力劳动  \r\n不忍主角对电影的热爱被埋没 劝说他接受教育*\r\n\r\n\r\n*无数先者的锚已抛在沙滩上 故事还会继续吗  \r\n指引他向外面的世界 危险且缤纷*\r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --&amp;gt;\r\n首次编辑时间：&quot;
+        },
+        {
+          &quot;url&quot;: &quot;/movies/040.movie.html&quot;,
+          &quot;frontmatter&quot;: {},
+          &quot;title&quot;: &quot;Dead Poets Society&quot;,
+          &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+          &quot;capture&quot;: &quot;o captain,my captain!  \r\n  \r\n\r\n令人热泪盈眶的作品  \r\n使我想起闻香识女人 虽然结果大相径庭  \r\n死亡诗社的各位终究没有那位老绅士站出来为他们辩护而屈服于校方压力 更有甚者主动卖师求荣  \r\n但正如rat所说  \r\n“Mr.Keating必须为Neil的死负责 不然难道是谁？ 学校管理层吗 Mr.Perry吗?”  \r\n“Believe what you want,but I say let Keating fry.\r\nI mean,why ruin our lives?”  \r\n  \r\n事实如此，逼走Mr.Keating的不是一心拥护他的学生们，甚至不是作为&quot;
+        },
+        {
+          &quot;url&quot;: &quot;/movies/050.movie.html&quot;,
+          &quot;frontmatter&quot;: {},
+          &quot;title&quot;: &quot;Fight Club&quot;,
+          &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+          &quot;capture&quot;: &quot;简单写一下 累了（阿b有个分析的挺不错的[^为什么《搏击俱乐部》有毒？]）\r\n\r\n*死亡诗社对于成为millionares,movie god,rock star给出的方案是carpe diem(亦即seize the day)*\r\n\r\n[^为什么《搏击俱乐部》有毒？]:https://www.bilibili.com/video/BV18zxseCEPj/?share_source=copy_web&amp;vd_source=85028746d21f712d55ccb19b328fbb9c\r\n\r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n\r\n&amp;lt;!-- 文章编&quot;
+        },
+        {
+          &quot;url&quot;: &quot;/movies/060.movie.html&quot;,
+          &quot;frontmatter&quot;: {},
+          &quot;title&quot;: &quot;Green Book&quot;,
+          &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+          &quot;capture&quot;: &quot;本来想截那段经典的  \r\n“If I&#39;m not black enough, and if I&#39;m not white enough, and if I&#39;m not man enough, then tell me , what am I?”  \r\n可惜看的时候没有截全 写这篇文章的时候已经删掉了这部电影（受限于捉襟见肘的磁盘容量）【取证也干了】\r\n\r\n*Don Shirlry的心声*\r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --&amp;gt;\r\n首次编辑时间：202508151131\r\n最后编辑时间：20250819164&quot;
+        },
+        {
+          &quot;url&quot;: &quot;/movies/070.movie.html&quot;,
+          &quot;frontmatter&quot;: {},
+          &quot;title&quot;: &quot;Raise The Red Lantern&quot;,
+          &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+          &quot;capture&quot;: &quot;一镜到底早期作品\r\n\r\n\r\n*心比天高。拎不清。又蠢又坏。仗着背后有二太太就敢跟四太太闹 最终也是香消玉殒。她该恨的根本不是四太太，让她恨封建的制度又过于不切实际，与其说她是囿于局限性，不如说是她拎不清，丫鬟的命想着做太太，老爷捏两把就以为可以跨越阶层。话虽如此，看着她在太太享受锤脚时期盼地将脚架在圆凳上幻想自己可以做上太太点灯仍不免同情。*\r\n\r\n*三太太是最为清醒的一个，出演最爱老爷、为老爷争风吃醋的娇太太，心里装着的是高医生。  \r\n有影评说她寄希望于高医生能带她远走高飞，实际上仍是把自身托付给另一个老爷  \r\n我认为不然，她只是在追寻自己的爱情罢了，她的权势地位物质等已经通过老爷的宠爱&quot;
+        },
+        {
+          &quot;url&quot;: &quot;/movies/080.movie.html&quot;,
+          &quot;frontmatter&quot;: {},
+          &quot;title&quot;: &quot;Source Code&quot;,
+          &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+          &quot;capture&quot;: &quot;对科幻题材不是很感兴趣\r\n\r\n*设定*\r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --&amp;gt;\r\n首次编辑时间：202508151131\r\n最后编辑时间：202508191645\r\n&amp;lt;!-- 编辑时间信息结束 --&amp;gt;&quot;
+        },
+        {
+          &quot;url&quot;: &quot;/movies/090.movie.html&quot;,
+          &quot;frontmatter&quot;: {},
+          &quot;title&quot;: &quot;The Last Emperor&quot;,
+          &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+          &quot;capture&quot;: &quot;*令人动容的道别，现场演出的友谊地久天长更渲染了离情别绪，却又不得不感慨溥仪对于礼教或者说王室的排场/仪式感的贯彻已然入肌入理——他依然保持着优雅*  \r\n\r\n*有个小彩蛋是友谊地久天长这首曲子也正是来自庄士敦的故乡——苏格兰*\r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --&amp;gt;\r\n首次编辑时间：202508151131\r\n最后编辑时间：202508191645\r\n&amp;lt;!-- 编辑时间信息结束 --&amp;gt;&quot;
+        },
+        {
+          &quot;url&quot;: &quot;/movies/100.movie.html&quot;,
+          &quot;frontmatter&quot;: {},
+          &quot;title&quot;: &quot;Yi Yi&quot;,
+          &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+          &quot;capture&quot;: &quot;可惜看的时候没截几张图  \r\n看罢只觉怅惘丝丝\r\n\r\n\r\n*敏敏所描绘的空心的感觉 在发现生活的一地鸡毛后于是转身向山里走去【doge】  \r\n回来却领悟山的后面还是山【欧阳锋所言极是】*\r\n\r\n*片中的这个人物相当超脱啊*\r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --&amp;gt;\r\n首次编辑时间：202508151131\r\n最后编辑时间：202508191645\r\n&amp;lt;!-- 编辑时间信息结束 --&amp;gt;&quot;
+        },
+        {
+          &quot;url&quot;: &quot;/movies/110.movie.html&quot;,
+          &quot;frontmatter&quot;: {},
+          &quot;title&quot;: &quot;A Man Called Otto&quot;,
+          &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+          &quot;capture&quot;: &quot;杀死那个叫奥托的男人[doge]  \r\n笔者这里看的是美版 后来经朋友提醒才发现有两个版本  \r\n明天再看看瑞典原版  \r\n\r\n笔者后来查了下，根据奥托墓碑上的出生年份1955年，假设其大约是18-25岁参兵即1973-1980，约莫是越南战争结束前后。1973年美国废除了征兵制度，奥托的参军只能是自愿参军，而彼时之美国，青年们的反战情绪严重，摇滚文化盛行（如约翰列侬的give peace a chance），可奥托却为无法参军所懊恼，可见奥托确实是一个活在旧时代的人【笑】（不过奥托参军的动机也有经济因素的考量：父母双亡的他无法从兜里多掏出一份火车票钱、请心仪的女子共进晚餐却无法为自己负担一份&quot;
+        },
+        {
+          &quot;url&quot;: &quot;/movies/120.movie.html&quot;,
+          &quot;frontmatter&quot;: {},
+          &quot;title&quot;: &quot;A Man Called Ove&quot;,
+          &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+          &quot;capture&quot;: &quot;以下欧维指代该片亦即直接从小说改的瑞典原版，奥托指代翻拍的美版  \r\n由于笔者没看过也不打算看小说原版，故以下评论不涉及对原著还原程度的评价，仅仅出于笔者对于导演表达方式的主观的考量。  \r\n\r\n相较于欧维 奥托对于回忆的处理更讨喜一点，奥托会在回忆进行到他印象深刻的地方时跟着念出来，仿佛他活在那段回忆中，更能表现奥托对于过去的沉湎，于此同时也更表现了奥托此刻濒死的状态。  \r\n奥托选择了一家更接地气的餐馆，当还不是他妻子的妻子突然啃上去的时候，餐馆里的人们都站起来鼓掌了，而欧维选择的餐厅更高雅，他们突然啃上的时候可以说是旁若无人，边上那桌也是想看但不敢看，再隔远一点的人好像压根没发现。  \r&quot;
+        },
+        {
+          &quot;url&quot;: &quot;/movies/130.movie.html&quot;,
+          &quot;frontmatter&quot;: {},
+          &quot;title&quot;: &quot;The Phoenician Scheme&quot;,
+          &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+          &quot;capture&quot;: &quot;韦斯安德森的新作    \r\n之前看过他的布达佩斯大饭店，本片风格与之极其相近，片中的人物都极其淡定地做一些惊世骇俗的事情(例如本片主角就极其淡定地把飞行员弹出飞机并成功迫降飞机)。  \r\n坦率地讲笔者没有看懂这部作品，本片叙事似乎没有布达佩斯大饭店那么有逻辑，其中还融入了一些宗教的明显超现实象征性的镜头与台词，~~要想只看一遍就品味其中意味对于笔者来说还是太困难了~~。  \r\n总的来说这部电影非常荒诞，但笔者不打算看第二遍，故选择去b站看拉片（由于这部电影还比较新 拉片比较少 去阿b逛了一圈基本都是剧情解说而非拉片 ~~不过视频底下的评论区还是挺有意思的~~）~~     \r\n韦斯安德森的镜头&quot;
+        },
+        {
+          &quot;url&quot;: &quot;/movies/&quot;,
+          &quot;frontmatter&quot;: {},
+          &quot;title&quot;: &quot;movie&quot;,
+          &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+          &quot;capture&quot;: &quot;记录一些电影，起源于向朋友推荐电影却苦于无法从过去一一品味的电影中捡出些佳作。\r\n\r\n 列表\r\n- 牯岭街少年杀人事件\r\n- 蓝色大门\r\n- 天堂电影院\r\n- 死亡诗社\r\n- 搏击俱乐部\r\n- 绿皮书\r\n- 大红灯笼高高挂\r\n- 源代码\r\n- 末代皇帝\r\n- 一一\r\n- 生无可恋的奥托\r\n- 一个叫欧维的男人决定去死\r\n- 腓尼基计划\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --\r\n首次编辑时间：202508150901\r\n最后编辑时间：202508201147\r\n&amp;lt;!-- 编辑时间信息结束 --&amp;gt;&quot;
+        },
+        {
+          &quot;url&quot;: &quot;/AboutMe.html&quot;,
+          &quot;frontmatter&quot;: {},
+          &quot;title&quot;: &quot;html&quot;,
+          &quot;date&quot;: &quot;2025-08-20 21:27:51&quot;,
+          &quot;capture&quot;: &quot;&quot;
+        },
+        {
+          &quot;url&quot;: &quot;/api-examples.html&quot;,
+          &quot;frontmatter&quot;: {
+            &quot;outline&quot;: &quot;deep&quot;
+          },
+          &quot;title&quot;: &quot;Runtime API Examples&quot;,
+          &quot;date&quot;: &quot;2025-08-20 20:40:59&quot;,
+          &quot;capture&quot;: &quot;Runtime API Examples\nThis page demonstrates usage of some of the runtime APIs provided by VitePress.\nThe main `useData()` API can be used to access site, theme, and page data for the current page. It works in both `.md` and `.vue` files:\n```md\n&amp;lt;script setup\nimport { useData } from &#39;vitepress&#39;\ncon&quot;
+        },
+        {
+          &quot;url&quot;: &quot;/markdown-examples.html&quot;,
+          &quot;frontmatter&quot;: {},
+          &quot;title&quot;: &quot;Markdown Extension Examples&quot;,
+          &quot;date&quot;: &quot;2025-08-20 20:40:59&quot;,
+          &quot;capture&quot;: &quot;This page demonstrates some of the built-in markdown extensions provided by VitePress.\n Syntax Highlighting\nVitePress provides Syntax Highlighting powered by Shiki, with additional features like line-highlighting:\nInput\n````md\n```js{4}\nexport default {\n  data () {\n    return {\n      msg: &#39;Highlighte&quot;
+        }
+      ]
+    },
+    &quot;groupPostsByYearMonth&quot;: {
+      &quot;2025 &quot;: {
+        &quot;08&quot;: [
+          {
+            &quot;url&quot;: &quot;/movies/010.movie.html&quot;,
+            &quot;frontmatter&quot;: {},
+            &quot;title&quot;: &quot;A Brighter Summer Day&quot;,
+            &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+            &quot;capture&quot;: &quot;阳光灿烂的日子（雾）  \r\n不过本片确实有与其相似的地方  \r\n同样的少年遇到了一个灿烂的女孩  \r\n少年的爱都笼罩在那个更强的他者（牯岭街之哈尼之风光&amp;romance、校医之于小明母亲的切身好处、小马之家境乃至滑头之武力；于阳光灿烂而言，主角对比刘忆苦似乎一无是处，于是只好陷入幻想的英勇中，最终在现实的一地鸡毛中行懦弱苟且之事却被米兰反杀）阴影之下  \r\n名曰阳光灿烂，实则为之炫目 深感卑微阴湿\r\n\r\n\r\n\r\n*爸爸教给我们的，道理未必错误，践行仰仗环境。*\r\n\r\n\r\n*浪漫的哈尼 战争与和平又何尝不是武侠呢？*\r\n\r\n\r\n*🦌般的小明寻找那个可以庇佑他的树 奔波于哈尼滑头乃至校医 遇到稚&quot;
+          },
+          {
+            &quot;url&quot;: &quot;/movies/020.movie.html&quot;,
+            &quot;frontmatter&quot;: {},
+            &quot;title&quot;: &quot;Blue Gate Crossing&quot;,
+            &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+            &quot;capture&quot;: &quot;非常好 满满青春味 使我的尸体微暖  \r\n关于蓝色大门，还有许多充满韵味的台词，可惜笔者观影时过于沉浸没怎么截图 譬如下面这段  \r\n“我叫张士豪，游泳队，吉他社，我还不错啊！”  \r\n即使过了三四个月，编辑此文时脑中依然能响起少年这句自信的自我介绍\r\n\r\n\r\n\r\n*还好我的青春尚没有那么多孟克柔式困扰，只要操心张士豪操心的就行了，余下皆是欢声笑语。*\r\n\r\n\r\n\r\n*恰到好处的关于青春的感受*  \r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --&amp;gt;\r\n首次编辑时间：202507201126\r\n最后编辑时间：202508&quot;
+          },
+          {
+            &quot;url&quot;: &quot;/movies/030.movie.html&quot;,
+            &quot;frontmatter&quot;: {},
+            &quot;title&quot;: &quot;Cinema Paradiso&quot;,
+            &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+            &quot;capture&quot;: &quot;意大利作品 基本只看过  \r\n美丽人生 教父 天堂电影院  \r\n观念里 意大利是一个落后的国家 观影时不解于这鸟不拉屎的地方竟然还有电影这么现代的东西 而且竟然有这么多的优秀电影\r\n\r\n\r\n*主角与其领路人老登的情谊 领路人老登吃了没文化的亏  \r\n在电影这一艺术领域从事着如车间工人般重复且危险的体力劳动  \r\n不忍主角对电影的热爱被埋没 劝说他接受教育*\r\n\r\n\r\n*无数先者的锚已抛在沙滩上 故事还会继续吗  \r\n指引他向外面的世界 危险且缤纷*\r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --&amp;gt;\r\n首次编辑时间：&quot;
+          },
+          {
+            &quot;url&quot;: &quot;/movies/040.movie.html&quot;,
+            &quot;frontmatter&quot;: {},
+            &quot;title&quot;: &quot;Dead Poets Society&quot;,
+            &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+            &quot;capture&quot;: &quot;o captain,my captain!  \r\n  \r\n\r\n令人热泪盈眶的作品  \r\n使我想起闻香识女人 虽然结果大相径庭  \r\n死亡诗社的各位终究没有那位老绅士站出来为他们辩护而屈服于校方压力 更有甚者主动卖师求荣  \r\n但正如rat所说  \r\n“Mr.Keating必须为Neil的死负责 不然难道是谁？ 学校管理层吗 Mr.Perry吗?”  \r\n“Believe what you want,but I say let Keating fry.\r\nI mean,why ruin our lives?”  \r\n  \r\n事实如此，逼走Mr.Keating的不是一心拥护他的学生们，甚至不是作为&quot;
+          },
+          {
+            &quot;url&quot;: &quot;/movies/050.movie.html&quot;,
+            &quot;frontmatter&quot;: {},
+            &quot;title&quot;: &quot;Fight Club&quot;,
+            &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+            &quot;capture&quot;: &quot;简单写一下 累了（阿b有个分析的挺不错的[^为什么《搏击俱乐部》有毒？]）\r\n\r\n*死亡诗社对于成为millionares,movie god,rock star给出的方案是carpe diem(亦即seize the day)*\r\n\r\n[^为什么《搏击俱乐部》有毒？]:https://www.bilibili.com/video/BV18zxseCEPj/?share_source=copy_web&amp;vd_source=85028746d21f712d55ccb19b328fbb9c\r\n\r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n\r\n&amp;lt;!-- 文章编&quot;
+          },
+          {
+            &quot;url&quot;: &quot;/movies/060.movie.html&quot;,
+            &quot;frontmatter&quot;: {},
+            &quot;title&quot;: &quot;Green Book&quot;,
+            &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+            &quot;capture&quot;: &quot;本来想截那段经典的  \r\n“If I&#39;m not black enough, and if I&#39;m not white enough, and if I&#39;m not man enough, then tell me , what am I?”  \r\n可惜看的时候没有截全 写这篇文章的时候已经删掉了这部电影（受限于捉襟见肘的磁盘容量）【取证也干了】\r\n\r\n*Don Shirlry的心声*\r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --&amp;gt;\r\n首次编辑时间：202508151131\r\n最后编辑时间：20250819164&quot;
+          },
+          {
+            &quot;url&quot;: &quot;/movies/070.movie.html&quot;,
+            &quot;frontmatter&quot;: {},
+            &quot;title&quot;: &quot;Raise The Red Lantern&quot;,
+            &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+            &quot;capture&quot;: &quot;一镜到底早期作品\r\n\r\n\r\n*心比天高。拎不清。又蠢又坏。仗着背后有二太太就敢跟四太太闹 最终也是香消玉殒。她该恨的根本不是四太太，让她恨封建的制度又过于不切实际，与其说她是囿于局限性，不如说是她拎不清，丫鬟的命想着做太太，老爷捏两把就以为可以跨越阶层。话虽如此，看着她在太太享受锤脚时期盼地将脚架在圆凳上幻想自己可以做上太太点灯仍不免同情。*\r\n\r\n*三太太是最为清醒的一个，出演最爱老爷、为老爷争风吃醋的娇太太，心里装着的是高医生。  \r\n有影评说她寄希望于高医生能带她远走高飞，实际上仍是把自身托付给另一个老爷  \r\n我认为不然，她只是在追寻自己的爱情罢了，她的权势地位物质等已经通过老爷的宠爱&quot;
+          },
+          {
+            &quot;url&quot;: &quot;/movies/080.movie.html&quot;,
+            &quot;frontmatter&quot;: {},
+            &quot;title&quot;: &quot;Source Code&quot;,
+            &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+            &quot;capture&quot;: &quot;对科幻题材不是很感兴趣\r\n\r\n*设定*\r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --&amp;gt;\r\n首次编辑时间：202508151131\r\n最后编辑时间：202508191645\r\n&amp;lt;!-- 编辑时间信息结束 --&amp;gt;&quot;
+          },
+          {
+            &quot;url&quot;: &quot;/movies/090.movie.html&quot;,
+            &quot;frontmatter&quot;: {},
+            &quot;title&quot;: &quot;The Last Emperor&quot;,
+            &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+            &quot;capture&quot;: &quot;*令人动容的道别，现场演出的友谊地久天长更渲染了离情别绪，却又不得不感慨溥仪对于礼教或者说王室的排场/仪式感的贯彻已然入肌入理——他依然保持着优雅*  \r\n\r\n*有个小彩蛋是友谊地久天长这首曲子也正是来自庄士敦的故乡——苏格兰*\r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --&amp;gt;\r\n首次编辑时间：202508151131\r\n最后编辑时间：202508191645\r\n&amp;lt;!-- 编辑时间信息结束 --&amp;gt;&quot;
+          },
+          {
+            &quot;url&quot;: &quot;/movies/100.movie.html&quot;,
+            &quot;frontmatter&quot;: {},
+            &quot;title&quot;: &quot;Yi Yi&quot;,
+            &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+            &quot;capture&quot;: &quot;可惜看的时候没截几张图  \r\n看罢只觉怅惘丝丝\r\n\r\n\r\n*敏敏所描绘的空心的感觉 在发现生活的一地鸡毛后于是转身向山里走去【doge】  \r\n回来却领悟山的后面还是山【欧阳锋所言极是】*\r\n\r\n*片中的这个人物相当超脱啊*\r\n\r\n有 &amp;lt;span id=\&quot;busuanzi_page_pv\&quot;\r\n\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --&amp;gt;\r\n首次编辑时间：202508151131\r\n最后编辑时间：202508191645\r\n&amp;lt;!-- 编辑时间信息结束 --&amp;gt;&quot;
+          },
+          {
+            &quot;url&quot;: &quot;/movies/110.movie.html&quot;,
+            &quot;frontmatter&quot;: {},
+            &quot;title&quot;: &quot;A Man Called Otto&quot;,
+            &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+            &quot;capture&quot;: &quot;杀死那个叫奥托的男人[doge]  \r\n笔者这里看的是美版 后来经朋友提醒才发现有两个版本  \r\n明天再看看瑞典原版  \r\n\r\n笔者后来查了下，根据奥托墓碑上的出生年份1955年，假设其大约是18-25岁参兵即1973-1980，约莫是越南战争结束前后。1973年美国废除了征兵制度，奥托的参军只能是自愿参军，而彼时之美国，青年们的反战情绪严重，摇滚文化盛行（如约翰列侬的give peace a chance），可奥托却为无法参军所懊恼，可见奥托确实是一个活在旧时代的人【笑】（不过奥托参军的动机也有经济因素的考量：父母双亡的他无法从兜里多掏出一份火车票钱、请心仪的女子共进晚餐却无法为自己负担一份&quot;
+          },
+          {
+            &quot;url&quot;: &quot;/movies/120.movie.html&quot;,
+            &quot;frontmatter&quot;: {},
+            &quot;title&quot;: &quot;A Man Called Ove&quot;,
+            &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+            &quot;capture&quot;: &quot;以下欧维指代该片亦即直接从小说改的瑞典原版，奥托指代翻拍的美版  \r\n由于笔者没看过也不打算看小说原版，故以下评论不涉及对原著还原程度的评价，仅仅出于笔者对于导演表达方式的主观的考量。  \r\n\r\n相较于欧维 奥托对于回忆的处理更讨喜一点，奥托会在回忆进行到他印象深刻的地方时跟着念出来，仿佛他活在那段回忆中，更能表现奥托对于过去的沉湎，于此同时也更表现了奥托此刻濒死的状态。  \r\n奥托选择了一家更接地气的餐馆，当还不是他妻子的妻子突然啃上去的时候，餐馆里的人们都站起来鼓掌了，而欧维选择的餐厅更高雅，他们突然啃上的时候可以说是旁若无人，边上那桌也是想看但不敢看，再隔远一点的人好像压根没发现。  \r&quot;
+          },
+          {
+            &quot;url&quot;: &quot;/movies/130.movie.html&quot;,
+            &quot;frontmatter&quot;: {},
+            &quot;title&quot;: &quot;The Phoenician Scheme&quot;,
+            &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+            &quot;capture&quot;: &quot;韦斯安德森的新作    \r\n之前看过他的布达佩斯大饭店，本片风格与之极其相近，片中的人物都极其淡定地做一些惊世骇俗的事情(例如本片主角就极其淡定地把飞行员弹出飞机并成功迫降飞机)。  \r\n坦率地讲笔者没有看懂这部作品，本片叙事似乎没有布达佩斯大饭店那么有逻辑，其中还融入了一些宗教的明显超现实象征性的镜头与台词，~~要想只看一遍就品味其中意味对于笔者来说还是太困难了~~。  \r\n总的来说这部电影非常荒诞，但笔者不打算看第二遍，故选择去b站看拉片（由于这部电影还比较新 拉片比较少 去阿b逛了一圈基本都是剧情解说而非拉片 ~~不过视频底下的评论区还是挺有意思的~~）~~     \r\n韦斯安德森的镜头&quot;
+          },
+          {
+            &quot;url&quot;: &quot;/movies/&quot;,
+            &quot;frontmatter&quot;: {},
+            &quot;title&quot;: &quot;movie&quot;,
+            &quot;date&quot;: &quot;2025-08-21 09:18:17&quot;,
+            &quot;capture&quot;: &quot;记录一些电影，起源于向朋友推荐电影却苦于无法从过去一一品味的电影中捡出些佳作。\r\n\r\n 列表\r\n- 牯岭街少年杀人事件\r\n- 蓝色大门\r\n- 天堂电影院\r\n- 死亡诗社\r\n- 搏击俱乐部\r\n- 绿皮书\r\n- 大红灯笼高高挂\r\n- 源代码\r\n- 末代皇帝\r\n- 一一\r\n- 生无可恋的奥托\r\n- 一个叫欧维的男人决定去死\r\n- 腓尼基计划\r\n\r\n&amp;lt;!-- 文章编辑时间信息 --\r\n首次编辑时间：202508150901\r\n最后编辑时间：202508201147\r\n&amp;lt;!-- 编辑时间信息结束 --&amp;gt;&quot;
+          },
+          {
+            &quot;url&quot;: &quot;/AboutMe.html&quot;,
+            &quot;frontmatter&quot;: {},
+            &quot;title&quot;: &quot;html&quot;,
+            &quot;date&quot;: &quot;2025-08-20 21:27:51&quot;,
+            &quot;capture&quot;: &quot;&quot;
+          },
+          {
+            &quot;url&quot;: &quot;/api-examples.html&quot;,
+            &quot;frontmatter&quot;: {
+              &quot;outline&quot;: &quot;deep&quot;
+            },
+            &quot;title&quot;: &quot;Runtime API Examples&quot;,
+            &quot;date&quot;: &quot;2025-08-20 20:40:59&quot;,
+            &quot;capture&quot;: &quot;Runtime API Examples\nThis page demonstrates usage of some of the runtime APIs provided by VitePress.\nThe main `useData()` API can be used to access site, theme, and page data for the current page. It works in both `.md` and `.vue` files:\n```md\n&amp;lt;script setup\nimport { useData } from &#39;vitepress&#39;\ncon&quot;
+          },
+          {
+            &quot;url&quot;: &quot;/markdown-examples.html&quot;,
+            &quot;frontmatter&quot;: {},
+            &quot;title&quot;: &quot;Markdown Extension Examples&quot;,
+            &quot;date&quot;: &quot;2025-08-20 20:40:59&quot;,
+            &quot;capture&quot;: &quot;This page demonstrates some of the built-in markdown extensions provided by VitePress.\n Syntax Highlighting\nVitePress provides Syntax Highlighting powered by Shiki, with additional features like line-highlighting:\nInput\n````md\n```js{4}\nexport default {\n  data () {\n    return {\n      msg: &#39;Highlighte&quot;
+          }
+        ]
+      }
+    },
+    &quot;groupPosts&quot;: {
+      &quot;categories&quot;: {},
+      &quot;tags&quot;: {}
+    },
+    &quot;groupCards&quot;: {
+      &quot;categories&quot;: [],
+      &quot;tags&quot;: []
+    }
+  }
+}</pre><h3 id="page-data" tabindex="-1">Page Data <a class="header-anchor" href="#page-data" aria-label="Permalink to &quot;Page Data&quot;">​</a></h3><pre>{
+  &quot;title&quot;: &quot;Runtime API Examples&quot;,
+  &quot;description&quot;: &quot;&quot;,
+  &quot;frontmatter&quot;: {
+    &quot;outline&quot;: &quot;deep&quot;
+  },
+  &quot;headers&quot;: [],
+  &quot;relativePath&quot;: &quot;api-examples.md&quot;,
+  &quot;filePath&quot;: &quot;api-examples.md&quot;
+}</pre><h3 id="page-frontmatter" tabindex="-1">Page Frontmatter <a class="header-anchor" href="#page-frontmatter" aria-label="Permalink to &quot;Page Frontmatter&quot;">​</a></h3><pre>{
+  &quot;outline&quot;: &quot;deep&quot;
+}</pre><h2 id="more" tabindex="-1">More <a class="header-anchor" href="#more" aria-label="Permalink to &quot;More&quot;">​</a></h2><p>Check out the documentation for the <a href="https://vitepress.dev/reference/runtime-api#usedata" target="_blank" rel="noreferrer">full list of runtime APIs</a>.</p></div></div></main><footer class="VPDocFooter" data-v-c68e01aa data-v-3ae58a8e><!--[--><!--]--><!----><nav class="prev-next" aria-labelledby="doc-footer-aria-label" data-v-3ae58a8e><span class="visually-hidden" id="doc-footer-aria-label" data-v-3ae58a8e>Pager</span><div class="pager" data-v-3ae58a8e><a class="VPLink link pager-link prev" href="/markdown-examples.html" data-v-3ae58a8e><!--[--><span class="desc" data-v-3ae58a8e>Previous page</span><span class="title" data-v-3ae58a8e>Markdown Examples</span><!--]--></a></div><div class="pager" data-v-3ae58a8e><!----></div></nav></footer><!--[--><!--]--></div></div></div><!--[--><!--]--></div></div><!----><!--[--><!--]--></div></div>
+    
+    
+  </body>
+</html>
