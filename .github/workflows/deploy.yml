@@ -23,9 +23,13 @@ jobs:
           node-version: 18
           cache: 'pnpm'
 
-      # 安装pnpm
-      - name: Install pnpm
-        run: npm install -g pnpm
+      # 使用官方pnpm动作安装pnpm
+      - uses: pnpm/action-setup@v3
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: latest
+          run_install: false
 
       # 安装依赖
       - name: Install dependencies
