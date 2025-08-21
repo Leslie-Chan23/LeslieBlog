@@ -12,6 +12,13 @@ const teekConfig = defineTeekConfig({
       },
     },
   ],
+    vitePlugins: {
+    sidebar: true,
+    sidebarOption: {
+      titleFormMd:true,//使用md文件一级标题名作为sidebar的text
+      restart:true,//每次增加删除重启sidebar
+    },
+  },
   footerInfo: {
     // 页脚信息，支持 HTML 格式（位于主题版权上方）
     topMessage: [""],
@@ -69,22 +76,6 @@ export default defineConfig({
         }
       ],
       // 可以为不同路径配置不同的侧边栏
-    '/movies/': [
-        { text: '电影列表', link: '/movies/'},
-        { text: '牯岭街少年杀人事件', link: '/movies/010.movie' },
-        { text: '蓝色大门', link: '/movies/020.movie' },
-        { text: '天堂电影院', link: '/movies/030.movie' },
-        { text: '死亡诗社', link: '/movies/040.movie' },
-        { text: '搏击俱乐部', link: '/movies/050.movie' },
-        { text: '绿皮书', link: '/movies/060.movie' },
-        { text: '大红灯笼高高挂', link: '/movies/070.movie' },
-        { text: '源代码', link: '/movies/080.movie' },
-        { text: '末代皇帝', link: '/movies/090.movie' },
-        { text: '一一', link: '/movies/100.movie' },
-        { text: '生无可恋的奥托', link: '/movies/110.movie' },
-        { text: '一个叫欧维的男人决定去死', link: '/movies/120.movie' },
-        { text: '腓尼基计划', link: '/movies/130.movie' }
-      ]
     },
     footer:{
       copyright:"",
