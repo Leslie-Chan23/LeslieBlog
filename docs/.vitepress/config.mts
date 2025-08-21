@@ -12,6 +12,34 @@ const teekConfig = defineTeekConfig({
       },
     },
   ],
+  footerInfo: {
+    // 页脚信息，支持 HTML 格式（位于主题版权上方）
+    topMessage: ["下面的内容和图标都可以修改（本条内容也可以隐藏的）"],
+    // 页脚信息，支持 HTML 格式（位于主题版权下方）
+    bottomMessage: ["上面的内容和图标都可以修改（本条内容也可以隐藏的）"],
+    // 主题版权配置
+    theme: {
+      show: true, // 是否显示主题版权，建议显示
+      name: "", // 自定义名称
+      link: "", // 自定义链接
+    },
+    // 博客版权配置
+    copyright: {
+      show: true, // 是否显示博客版权
+      createYear: 2021, // 创建年份
+      suffix: "天客 Blog", // 后缀
+    },
+    // ICP 备案信息配置
+    icpRecord: {
+      name: "桂ICP备2021009994号",
+      link: "http://beian.miit.gov.cn/",
+    },
+    // 网络安全备案信息配置
+    securityRecord: {
+      name: "",
+      link: "",
+    },
+  },
 });
 
 // https://vitepress.dev/reference/site-config
