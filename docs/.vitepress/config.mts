@@ -16,7 +16,12 @@ const teekConfig = defineTeekConfig({
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-// Teek主题配置
+  // 添加base选项
+  base: '/LeslieBlog/',  // 如果部署到GitHub Pages的username.github.io/repo/
+  // 或者
+  // base: '/blog/',  // 如果部署到子路径/blog/
+  
+  // Teek主题配置
   extends: teekConfig,
   title: "Leslie Blog On Vite Press",
   description: "a blog mainly focus on my road",
@@ -24,7 +29,8 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'About me', link: '/AboutMe' }
+      { text: 'About me', link: '/AboutMe' },
+      { text: '一些影评', link: '/movies' }
     ],
 
     search: {
