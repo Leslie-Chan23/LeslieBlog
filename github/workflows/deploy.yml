@@ -1,0 +1,50 @@
+# 这个工作流将构建VitePress网站并部署到GitHub Pages
+name: Deploy VitePress Site to GitHub Pages
+
+on:
+  # 每当推送到main或master分支时触发
+  push:
+    branches: [main, master]
+  # 允许从Actions选项卡手动触发
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # 添加此权限
+    steps:
+      # 检出代码
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # 设置Node.js环境
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: pnpm
+
+      # 安装pnpm
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      # 安装依赖
+      - name: Install dependencies
+        run: pnpm install
+
+      # 构建VitePress网站
+      - name: Build VitePress site
+        run: pnpm docs:build
+
+      # 部署到GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs/.vitepress/dist
+          # 以下配置是可选的，但推荐使用
+          user_name: github-actions[bot]
+          user_email: github-actions[bot]@users.noreply.github.com
+          commit_message: Deploy VitePress site
+          force_orphan: true
