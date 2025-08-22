@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "@giscus/vue": "^3.1.1",
     "gh-pages": "^6.3.0",
     "vitepress": "1.6.3",
     "vitepress-theme-teek": "^1.4.3",

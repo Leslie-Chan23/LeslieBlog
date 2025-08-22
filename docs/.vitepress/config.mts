@@ -4,6 +4,7 @@ import { defineTeekConfig } from "vitepress-theme-teek/config";
 
 // Teek 主题配置
 const teekConfig = defineTeekConfig({
+  teekTheme: true,
   siteAnalytics: [
     {
       provider: "baidu",
@@ -12,6 +13,29 @@ const teekConfig = defineTeekConfig({
       },
     },
   ],
+   comment: {
+    provider: "giscus", // 评论区提供者
+    // 评论区配置项，根据 provider 不同而不同，具体看对应官网的使用介绍
+    options: {
+      // twikoo 配置，官网：https://twikoo.js.org/
+      // envId: "your envId",
+
+      // waline 配置，官网：https://waline.js.org/
+      // serverURL: "your serverURL",
+      // jsLink: "https://unpkg.com/@waline/client@v3/dist/waline.js",
+      // cssLink: "https://unpkg.com/@waline/client@v3/dist/waline.css",
+
+      // giscus 配置，官网：https://giscus.app/zh-CN
+      repo: "Leslie-Chan23/LeslieBlog",
+      repoId: "R_kgDOPhgehA",
+      category: "General",
+      categoryId: "DIC_kwDOPhgehM4CudR7",
+
+      // artalk 配置，官网：https://artalk.js.org/
+      // server: "your server",
+      // site: "site",
+    },
+  },
    banner: {
     enabled: true,
     name: "Leslie", // Banner 标题，默认读取 vitepress 的 title 属性
@@ -85,7 +109,8 @@ export default defineConfig({
       { text: 'About me', link: '/AboutMe' },
       { text: '一些影评', link: '/movies' },
       { text: 'blog', link: '/blog' },
-      { text: 'NAS', link: '/NAS' }
+      { text: 'NAS', link: '/NAS' },
+      { text: '往事', link: '/往事' }
     ],
 
     search: {
