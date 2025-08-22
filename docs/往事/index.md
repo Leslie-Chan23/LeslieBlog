@@ -16,4 +16,7 @@
 - []()
 
 
+## 免责声明 <Badge text="doge" type="warning" />
+过去太久，如有出入，请指正
+
 
