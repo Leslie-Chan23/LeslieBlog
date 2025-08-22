@@ -36,7 +36,12 @@ const teekConfig = defineTeekConfig({
       // site: "site",
     },
   },
-   banner: {
+  breadcrumb: {
+    enabled: true, // 是否启用面包屑
+    showCurrentName: false, // 面包屑最后一列是否显示当前文章的文件名
+    separator: "/", // 面包屑分隔符
+  },  
+  banner: {
     enabled: true,
     name: "Leslie", // Banner 标题，默认读取 vitepress 的 title 属性
     bgStyle: "fullImg", // Banner 背景风格：pure 为纯色背景，partImg 为局部图片背景，fullImg 为全屏图片背景
