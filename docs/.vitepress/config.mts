@@ -104,7 +104,12 @@ export default defineConfig({
   head: [
     ["link", { rel: "icon", href: "/LeslieBlog/favicon.ico", type: "image/x-icon" }],
     ["link", { rel: "shortcut icon", href: "/LeslieBlog/favicon.ico", type: "image/x-icon" }],
-    ["link", { rel: "bookmark", href: "/LeslieBlog/favicon.ico" }]
+    ["link", { rel: "bookmark", href: "/LeslieBlog/favicon.ico" }],
+    // 添加不蒜子统计脚本
+    ["script", { 
+      async: "async",
+      src: "//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" 
+    }]
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
