@@ -101,8 +101,11 @@ export default defineConfig({
   description: "a blog mainly focus on my road",
   
   // 将head配置放在这里，与themeConfig同级
-  head: [["link", { rel: "icon", href: "/favicon.ico", type: "image/png" }]],
-  
+  head: [
+    ["link", { rel: "icon", href: "/LeslieBlog/favicon.ico", type: "image/x-icon" }],
+    ["link", { rel: "shortcut icon", href: "/LeslieBlog/favicon.ico", type: "image/x-icon" }],
+    ["link", { rel: "bookmark", href: "/LeslieBlog/favicon.ico" }]
+  ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
