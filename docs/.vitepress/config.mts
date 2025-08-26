@@ -95,18 +95,14 @@ const teekConfig = defineTeekConfig({
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  // 添加base选项
-  base: '/LeslieBlog/',  // 如果部署到GitHub Pages的username.github.io/repo/
-  // 或者
-  // base: '/blog/',  // 如果部署到子路径/blog/
-  
-  head: [["link", { rel: "icon", href: "/bianmu.svg" }]],
-
-  // Teek主题配置
-  
+  base: '/LeslieBlog/',
   extends: teekConfig,
   title: "Leslie Blog On Vite Press",
   description: "a blog mainly focus on my road",
+  
+  // 将head配置放在这里，与themeConfig同级
+  head: [["link", { rel: "icon", href: "/favicon.ico", type: "image/png" }]],
+  
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -123,7 +119,6 @@ export default defineConfig({
     },
 
     sidebar: {
-      // 默认侧边栏配置
       '/': [
         {
           text: 'Examples',
@@ -133,7 +128,6 @@ export default defineConfig({
           ]
         }
       ],
-      // 可以为不同路径配置不同的侧边栏
     },
     footer:{
       copyright:"",
@@ -141,8 +135,8 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Leslie-Chan23' }
-    ]
+    ],
 
-
+    // 从这里删除head配置
   }
 })
