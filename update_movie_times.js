@@ -29,16 +29,17 @@ function formatDateTime(date, format) {
 
 /**
  * 生成方法三格式的时间信息
- * @param {string} dateTime - 格式化的时间字符串
+ * @param {string} createdTime - 格式化的创建时间字符串
+ * @param {string} modifiedTime - 格式化的修改时间字符串
  * @returns {string} 方法三格式的时间信息
  */
-function generateTimeInfo(dateTime) {
+function generateTimeInfo(createdTime, modifiedTime) {
     return `<!-- 文章编辑时间信息 -->
 ***
 
 📅 **文章时间线**
-- **首次编辑**：\`${dateTime}\`
-- **最后更新**：\`${dateTime}\`
+- **首次创建**：\`${createdTime}\`
+- **最后更新**：\`${modifiedTime}\`
 
 ***
 <!-- 编辑时间信息结束 -->`;
@@ -51,17 +52,19 @@ function generateTimeInfo(dateTime) {
  */
 function updateFileTime(filePath, fileName) {
     try {
-        // 获取文件最后修改时间
+        // 获取文件创建时间和最后修改时间
         const stats = fs.statSync(filePath);
+        const createdTime = new Date(stats.birthtime);
         const modifiedTime = new Date(stats.mtime);
-        const formattedTime = formatDateTime(modifiedTime, TIME_FORMAT);
+        const formattedCreatedTime = formatDateTime(createdTime, TIME_FORMAT);
+        const formattedModifiedTime = formatDateTime(modifiedTime, TIME_FORMAT);
         
         // 读取文件内容
         let content = fs.readFileSync(filePath, 'utf8');
         
         // 检查是否已存在时间信息
         const timeInfoRegex = /<!-- 文章编辑时间信息 -->[\s\S]*?<!-- 编辑时间信息结束 -->/;
-        const newTimeInfo = generateTimeInfo(formattedTime);
+        const newTimeInfo = generateTimeInfo(formattedCreatedTime, formattedModifiedTime);
         
         let updatedContent;
         if (timeInfoRegex.test(content)) {
@@ -75,7 +78,7 @@ function updateFileTime(filePath, fileName) {
         // 写入更新后的内容
         fs.writeFileSync(filePath, updatedContent, 'utf8');
         
-        console.log(`✅ 已更新: ${fileName} (最后修改: ${formattedTime})`);
+        console.log(`✅ 已更新: ${fileName} (创建时间: ${formattedCreatedTime}, 最后修改: ${formattedModifiedTime})`);
         
     } catch (error) {
         console.error(`❌ 处理文件 ${fileName} 时出错:`, error.message);
