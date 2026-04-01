@@ -14,7 +14,7 @@ sidebar: false
 ::: shareCard
 ```yaml
 - name: ImtBlog
-  desc: 我的另一篇更专注于影评的博客
+  desc: 我的另一篇更专注于影评的博客【已废弃】
   avatar: https://leslie-chan23.github.io/ImtBlog/assets/ThePhoenicianScheme7-Do6sA0ke.png
   link: https://leslie-chan23.github.io/ImtBlog/
   bgColor: '#DFEEE7' # 可选，默认 var(--bodyBg)。颜色值有 # 号时请添加单引号    
